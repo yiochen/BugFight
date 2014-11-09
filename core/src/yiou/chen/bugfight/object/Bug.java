@@ -1,14 +1,22 @@
 package yiou.chen.bugfight.object;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
+
+import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.Constants;
 
 /**
  * Created by Yiou on 11/8/2014.
  */
-public class Bug extends DynamicGameObject {
+public class Bug extends DynamicGameObject implements Renderable{
     public int hp=1;
+    public int cost=10;
+    public int damage=10;
+    public Texture asset;
     public Bug(float x, float y, float width, float height) {
         super(x, y, width, height, GameObject.TOTAL_INSIDE);
+        asset=Assets.bug1;
     }
 
     /**
@@ -24,5 +32,10 @@ public class Bug extends DynamicGameObject {
         float height=this.getBounds().height;
         float bottom=this.getPos().y-height/2;
         return (bottom<= Constants.endLine);
+    }
+
+    @Override
+    public void draw(Batch batch) {
+        batch.draw(asset, getBounds().getX(), getBounds().getY(), getBounds().getWidth(), getBounds().getHeight());
     }
 }

@@ -15,6 +15,7 @@ public class Assets {
     public static Texture bug5;
     public static Texture explosion;
     public static Texture progress;
+    public static Texture panel;
 
     public static Texture loadTexture(String file){
         return new Texture(Gdx.files.internal(file));
@@ -29,6 +30,7 @@ public class Assets {
         bug5=loadTexture("data/bug_5.png");
         explosion=loadTexture("data/explosion.png");
         progress=loadTexture("data/progressBar.png");
+        panel=loadTexture("data/panel.png");
     }
 
 }

@@ -29,6 +29,7 @@ public class WorldRenderer {
 
 
 
+
     public WorldRenderer(SpriteBatch batch, World world) {
         this.world = world;
         this.batch = batch;
@@ -65,17 +66,28 @@ public class WorldRenderer {
     public void renderController() {
         batch.enableBlending();
         batch.begin();
-        renderProgress(0,80,Constants.GAME_WIDTH,world.powerScale.scale);
+        renderPanel();
+        renderProgress(0,Constants.PANEL_HEIGHT,Constants.GAME_WIDTH,world.powerScale.scale/100);
+        renderProgress(0,Constants.LIFE_BAR_Y,Constants.LIFE_BAR_LENGTH,world.life/Constants.LIFE);
         batch.end();
     }
 
+    private void renderPanel() {
+        batch.draw(Assets.panel,0,0,Constants.GAME_WIDTH,Constants.PANEL_HEIGHT);
+        batch.draw(Assets.bug1,0,0,64,80);
+        batch.draw(Assets.bug2,64,0,64,80);
+        batch.draw(Assets.bug3,128,0,64,80);
+    }
+
     private void renderProgress(float x, float y, float width, float scale) {
-        batch.draw(Assets.progress,x,y,width*scale/100,40);
+        batch.setColor(Color.BLUE);
+        batch.draw(Assets.progress,x,y,width*scale,Constants.POWER_BAR_HEIGHT);
+        batch.setColor(Color.WHITE);
     }
 
     private void renderBugs() {
         for (Bug bug : world.bugs) {
-            batch.draw(Assets.bug1, bug.getBounds().getX(), bug.getBounds().getY(), bug.getBounds().getWidth(), bug.getBounds().getHeight());
+            bug.draw(batch);
         }
     }
 }

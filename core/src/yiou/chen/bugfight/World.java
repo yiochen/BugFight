@@ -10,6 +10,9 @@ import java.util.List;
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.object.PowerScale;
 import yiou.chen.bugfight.object.Updateable;
+import yiou.chen.bugfight.object.bugs.Bug1;
+import yiou.chen.bugfight.object.bugs.Bug2;
+import yiou.chen.bugfight.object.bugs.Bug3;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -20,7 +23,7 @@ public class World implements Updateable{
     private final WorldListener listener;
     public Array<Bug> bugs;
     public PowerScale powerScale;
-    public float life;
+    public float life=Constants.LIFE;
 
     public World(WorldListener listener){
         this.listener=listener;
@@ -42,14 +45,16 @@ public class World implements Updateable{
             bug.update(deltaTime);
             if (bug.reachEnd()){
                 attackHuman(bug);
+
             }
         }
     }
 
     public void addBug(int type){
 
-        Bug bug=new Bug(60,900,64,80);
-        bug.vel.add(0,-45);
+        Bug bug=new Bug3(60,900);
+
+        powerScale.scale-=bug.cost;
         bugs.add(bug);
     }
     /**
@@ -58,7 +63,10 @@ public class World implements Updateable{
      * @return true if the player is still alive. false if dead.
      */
     private boolean attackHuman(Bug bug) {
-        return false;
+        life-=bug.damage;
+        bugs.removeValue(bug,true);
+        return life>0;
+
     }
 
     public static interface WorldListener{

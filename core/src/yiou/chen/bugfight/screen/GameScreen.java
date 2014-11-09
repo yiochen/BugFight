@@ -1,7 +1,9 @@
 package yiou.chen.bugfight.screen;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.ScreenAdapter;
+import com.badlogic.gdx.graphics.g2d.Batch;
 
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.World;
@@ -20,10 +22,14 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
     private final World world;
     private final WorldRenderer render;
 
+
+
     private BugFightGame game;
     private int state;
 
     public GameScreen(BugFightGame game){
+        InputListener inputListener=new InputListener();
+        Gdx.input.setInputProcessor(inputListener);
         this.game=game;
 
         state=GAME_READY;
@@ -48,17 +54,22 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
     }
 
     @Override
-    public void draw() {
+    public void draw(Batch batch) {
         render.render();
     }
 
     @Override
     public void render(float delta) {
         update(delta);
-        draw();
+        draw(game.batch);
         //detect user input
-        if (Gdx.input.isTouched()){
+
+    }
+    private class InputListener extends InputAdapter{
+        @Override
+        public boolean touchDown(int screenX, int screenY, int pointer, int button) {
             world.addBug(1);
+            return true;
         }
     }
 }
