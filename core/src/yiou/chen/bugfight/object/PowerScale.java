@@ -1,5 +1,7 @@
 package yiou.chen.bugfight.object;
 
+import yiou.chen.bugfight.interfaces.Updateable;
+
 /**
  * A scale to show the power to make bugs, the larger the power, the more or stronger bugs could be made.
  * Created by Yiou on 11/8/2014.

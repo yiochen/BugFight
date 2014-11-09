@@ -5,11 +5,12 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.Constants;
+import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
  * Created by Yiou on 11/8/2014.
  */
-public class Bug extends DynamicGameObject implements Renderable{
+public class Bug extends DynamicGameObject implements Renderable {
     public int hp=1;
     public int cost=10;
     public int damage=10;

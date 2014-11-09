@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.ProgressBar;
@@ -25,14 +26,13 @@ public class WorldRenderer {
     private final SpriteBatch batch;
     private final World world;
     private final OrthographicCamera camera;
-
-
-
+    private final BitmapFont font;
 
 
     public WorldRenderer(SpriteBatch batch, World world) {
         this.world = world;
         this.batch = batch;
+        this.font=Assets.font;
         camera=new OrthographicCamera();
         camera.setToOrtho(false,Constants.GAME_WIDTH,Constants.GAME_HEIGHT);
 
@@ -67,8 +67,11 @@ public class WorldRenderer {
         batch.enableBlending();
         batch.begin();
         renderPanel();
-        renderProgress(0,Constants.PANEL_HEIGHT,Constants.GAME_WIDTH,world.powerScale.scale/100);
-        renderProgress(0,Constants.LIFE_BAR_Y,Constants.LIFE_BAR_LENGTH,world.life/Constants.LIFE);
+        renderProgress(0, Constants.PANEL_HEIGHT, Constants.GAME_WIDTH, world.powerScale.scale / 100);
+        font.setColor(Color.WHITE);
+        font.setScale((float)1,(float)2);
+        font.draw(batch,"HP",0,Constants.LIFE_BAR_Y);
+        renderProgress(50,Constants.LIFE_BAR_Y,Constants.LIFE_BAR_LENGTH,world.life/Constants.LIFE);
         batch.end();
     }
 

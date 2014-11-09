@@ -1,4 +1,4 @@
-package yiou.chen.bugfight.object;
+package yiou.chen.bugfight.interfaces;
 
 /**
  * Created by Yiou on 11/8/2014.

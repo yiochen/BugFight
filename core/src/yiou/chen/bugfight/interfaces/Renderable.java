@@ -1,4 +1,4 @@
-package yiou.chen.bugfight.object;
+package yiou.chen.bugfight.interfaces;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 

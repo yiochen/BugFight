@@ -5,15 +5,15 @@ import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.g2d.Batch;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
+import yiou.chen.bugfight.interfaces.BlueToothCallback;
 import yiou.chen.bugfight.object.Bug;
-import yiou.chen.bugfight.object.Renderable;
-import yiou.chen.bugfight.object.Updateable;
+import yiou.chen.bugfight.interfaces.Renderable;
+import yiou.chen.bugfight.interfaces.Updateable;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -26,7 +26,7 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
     private static final int GAME_OVER = 4;
     private final World world;
     private final WorldRenderer render;
-
+    private final BlueToothCallback bluetooth;
 
 
     private BugFightGame game;
@@ -36,7 +36,7 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
         InputListener inputListener=new InputListener();
         Gdx.input.setInputProcessor(inputListener);
         this.game=game;
-
+        bluetooth=game.blCallback;
         state=GAME_READY;
         this.world=new World(this);
         this.render=new WorldRenderer(game.batch,world);
@@ -65,6 +65,10 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
 
     @Override
     public void render(float delta) {
+        int tmp=bluetooth.read();
+        if (tmp>0){
+            world.addBug(tmp-1);
+        }
         update(delta);
         draw(game.batch);
         //detect user input
@@ -92,7 +96,8 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
             for (int i=0; i<world.prototypes.size; i++){
 
                 if (world.prototypes.get(i).getBounds().contains(x,y)) {
-                    world.addBug(i);
+                    //world.addBug(i);
+                    bluetooth.write(i+1);
                 }
             }
             return true;

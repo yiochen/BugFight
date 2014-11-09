@@ -10,15 +10,23 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 
+import yiou.chen.bugfight.interfaces.BlueToothCallback;
 import yiou.chen.bugfight.screen.GameScreen;
+import yiou.chen.bugfight.screen.MainScreen;
 
 public class BugFightGame extends Game {
-	public SpriteBatch batch;
-	private Texture bug;
-    private Rectangle bugData;
-    private Array<Rectangle> bugArray;
-    //use array to save bug data,
+    public final BlueToothCallback blCallback;
+    public SpriteBatch batch;
 
+
+    public BugFightGame(BlueToothCallback callback){
+        super();
+        this.blCallback=callback;
+    }
+    public BugFightGame(){
+        super();
+        blCallback=null;
+    }
     @Override
 	public void create () {
         //load resources
@@ -26,7 +34,7 @@ public class BugFightGame extends Game {
 
 		batch = new SpriteBatch();
 
-        setScreen(new GameScreen(this));
+        setScreen(new MainScreen(this));
 
 
 	}

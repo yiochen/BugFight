@@ -1,15 +1,14 @@
 package yiou.chen.bugfight;
 
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
 import java.util.Iterator;
-import java.util.List;
 
 
+import yiou.chen.bugfight.interfaces.BlueToothCallback;
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.object.PowerScale;
-import yiou.chen.bugfight.object.Updateable;
+import yiou.chen.bugfight.interfaces.Updateable;
 import yiou.chen.bugfight.object.bugs.Bug1;
 import yiou.chen.bugfight.object.bugs.Bug2;
 import yiou.chen.bugfight.object.bugs.Bug3;

@@ -2,10 +2,12 @@ package yiou.chen.bugfight.object;
 
 import com.badlogic.gdx.math.Vector2;
 
+import yiou.chen.bugfight.interfaces.Updateable;
+
 /**
  * Created by Yiou on 11/8/2014.
  */
-public class DynamicGameObject extends GameObject implements Updateable{
+public class DynamicGameObject extends GameObject implements Updateable {
 
     public final Vector2 vel=new Vector2();
     public final Vector2 acc=new Vector2();

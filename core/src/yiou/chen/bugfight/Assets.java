@@ -2,6 +2,7 @@ package yiou.chen.bugfight;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -16,6 +17,7 @@ public class Assets {
     public static Texture explosion;
     public static Texture progress;
     public static Texture panel;
+    public static BitmapFont font;
 
     public static Texture loadTexture(String file){
         return new Texture(Gdx.files.internal(file));
@@ -31,6 +33,7 @@ public class Assets {
         explosion=loadTexture("data/explosion.png");
         progress=loadTexture("data/progressBar.png");
         panel=loadTexture("data/panel.png");
+        font = new BitmapFont(Gdx.files.internal("data/font.fnt"), Gdx.files.internal("data/font.png"), false);
     }
 
 }
