@@ -16,6 +16,8 @@ public class Constants {
     public static float POWER_BAR_HEIGHT=10;
     public static float LIFE_BAR_LENGTH=300;
     public static float LIFE_BAR_Y=1260;
+    public static float SPOWN_EDGE=70;
+    public static int HAND_POWER=1;
     public static float endLine=PANEL_HEIGHT+POWER_BAR_HEIGHT;
 
 }

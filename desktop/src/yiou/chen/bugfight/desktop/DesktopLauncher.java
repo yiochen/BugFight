@@ -10,8 +10,8 @@ public class DesktopLauncher {
     public static void main(String[] arg) {
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
         config.title = Constants.GAME_NAME;
-        config.width = 450;
-        config.height = 800;
+        config.width = (int)Constants.GAME_WIDTH;
+        config.height =(int)Constants.GAME_HEIGHT;
         new LwjglApplication(new BugFightGame(), config);
     }
 }

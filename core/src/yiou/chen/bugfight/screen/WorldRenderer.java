@@ -74,9 +74,9 @@ public class WorldRenderer {
 
     private void renderPanel() {
         batch.draw(Assets.panel,0,0,Constants.GAME_WIDTH,Constants.PANEL_HEIGHT);
-        batch.draw(Assets.bug1,0,0,64,80);
-        batch.draw(Assets.bug2,64,0,64,80);
-        batch.draw(Assets.bug3,128,0,64,80);
+        for (Bug bug:world.prototypes){
+            bug.draw(batch);
+        }
     }
 
     private void renderProgress(float x, float y, float width, float scale) {

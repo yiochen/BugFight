@@ -24,11 +24,21 @@ public class World implements Updateable{
     public Array<Bug> bugs;
     public PowerScale powerScale;
     public float life=Constants.LIFE;
+    public Array<Bug> prototypes;
+
 
     public World(WorldListener listener){
         this.listener=listener;
         bugs=new Array<Bug>();
+        makePrototype();
         powerScale=new PowerScale(20);
+    }
+
+    private void makePrototype() {
+        prototypes=new Array<Bug>();
+        prototypes.add(new Bug1(10,0));
+        prototypes.add(new Bug2(100,0));
+        prototypes.add(new Bug3(200,0));
     }
 
     /**
@@ -51,11 +61,23 @@ public class World implements Updateable{
     }
 
     public void addBug(int type){
+        Bug bug;
+        float x=(float)Math.random()*(Constants.GAME_WIDTH-Constants.SPOWN_EDGE*2)+Constants.SPOWN_EDGE;
+        switch(type){
+            case 0:bug=new Bug1(x,1000);
+                break;
+            case 1:bug=new Bug2(x,1000);
+                break;
+            case 2:bug=new Bug3(x,1000);
+                break;
+            default:bug=new Bug1(x,1000);
+                break;
+        }
+        if (powerScale.scale>=bug.cost){
+            powerScale.scale-=bug.cost;
+            bugs.add(bug);
+        }
 
-        Bug bug=new Bug3(60,900);
-
-        powerScale.scale-=bug.cost;
-        bugs.add(bug);
     }
     /**
      *

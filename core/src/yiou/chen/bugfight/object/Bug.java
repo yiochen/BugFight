@@ -24,7 +24,7 @@ public class Bug extends DynamicGameObject implements Renderable{
      * @param damage the damage caused by the attack
      * @return true if the bug is still alive, false, if the bug die after the attack
      */
-    public boolean attack(int damage){
+    public boolean attackBug(int damage){
         hp-=damage;
         return hp>0;
     }
