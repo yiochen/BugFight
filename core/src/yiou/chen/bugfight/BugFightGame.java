@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 //test change
 //test change2
+//test change3
 public class BugFightGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
