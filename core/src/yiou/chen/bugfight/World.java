@@ -35,9 +35,9 @@ public class World implements Updateable{
 
     private void makePrototype() {
         prototypes=new Array<Bug>();
-        prototypes.add(new Bug1(10,0));
-        prototypes.add(new Bug2(100,0));
-        prototypes.add(new Bug3(200,0));
+        prototypes.add(new Bug1(100,70));
+        prototypes.add(new Bug2(200,70));
+        prototypes.add(new Bug3(300,70));
     }
 
     /**
@@ -72,10 +72,8 @@ public class World implements Updateable{
             default:bug=new Bug1(x,1000);
                 break;
         }
-        if (powerScale.scale>=bug.cost){
-            powerScale.scale-=bug.cost;
+
             bugs.add(bug);
-        }
 
     }
     /**

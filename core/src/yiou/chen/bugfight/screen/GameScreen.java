@@ -14,6 +14,9 @@ import yiou.chen.bugfight.interfaces.BlueToothCallback;
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.interfaces.Renderable;
 import yiou.chen.bugfight.interfaces.Updateable;
+import yiou.chen.bugfight.object.bugs.Bug1;
+import yiou.chen.bugfight.object.bugs.Bug2;
+import yiou.chen.bugfight.object.bugs.Bug3;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -97,7 +100,22 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
 
                 if (world.prototypes.get(i).getBounds().contains(x,y)) {
                     //world.addBug(i);
-                    bluetooth.write(i+1);
+                    Bug bug;
+                    switch(i){
+                        case 0:bug=new Bug1(0,1000);
+                            break;
+                        case 1:bug=new Bug2(0,1000);
+                            break;
+                        case 2:bug=new Bug3(0,1000);
+                            break;
+                        default:bug=new Bug1(0,1000);
+                            break;
+                    }
+                    if (world.powerScale.scale>=bug.cost){
+                        world.powerScale.scale-=bug.cost;
+                        bluetooth.write(i+1);
+                    }
+
                 }
             }
             return true;
