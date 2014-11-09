@@ -77,13 +77,20 @@ public class WorldRenderer {
 
     private void renderPanel() {
         batch.draw(Assets.panel,0,0,Constants.GAME_WIDTH,Constants.PANEL_HEIGHT);
+        Color color=batch.getColor();
         for (Bug bug:world.prototypes){
+            if (world.powerScale.scale<bug.cost){
+                batch.setColor(Color.GRAY);
+            }else{
+                batch.setColor(Color.WHITE);
+            }
             bug.draw(batch);
+            batch.setColor(color);
         }
     }
 
     private void renderProgress(float x, float y, float width, float scale) {
-        batch.setColor(Color.BLUE);
+        batch.setColor(Color.YELLOW);
         batch.draw(Assets.progress,x,y,width*scale,Constants.POWER_BAR_HEIGHT);
         batch.setColor(Color.WHITE);
     }

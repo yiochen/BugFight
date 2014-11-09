@@ -30,7 +30,7 @@ public class World implements Updateable{
         this.listener=listener;
         bugs=new Array<Bug>();
         makePrototype();
-        powerScale=new PowerScale(20);
+        powerScale=new PowerScale(10);
     }
 
     private void makePrototype() {
