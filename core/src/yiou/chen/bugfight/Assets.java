@@ -1,6 +1,7 @@
 package yiou.chen.bugfight;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
@@ -18,6 +19,9 @@ public class Assets {
     public static Texture progress;
     public static Texture panel;
     public static BitmapFont font;
+    public static Sound slap;
+    public static Sound pang;
+    public static Sound pain;
 
     public static Texture loadTexture(String file){
         return new Texture(Gdx.files.internal(file));
@@ -34,6 +38,9 @@ public class Assets {
         progress=loadTexture("data/progressBar.png");
         panel=loadTexture("data/panel.png");
         font = new BitmapFont(Gdx.files.internal("data/font.fnt"), Gdx.files.internal("data/font.png"), false);
+        slap=Gdx.audio.newSound(Gdx.files.internal("data/slap.mp3"));
+        pang=Gdx.audio.newSound(Gdx.files.internal("data/pang.mp3"));
+        pain=Gdx.audio.newSound(Gdx.files.internal("data/pain.mp3"));
     }
 
 }

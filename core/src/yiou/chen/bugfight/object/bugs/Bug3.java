@@ -13,7 +13,7 @@ public class Bug3 extends Bug {
 
     public Bug3(float x, float y) {
         super(x, y, 64,100);
-        this.vel.add(new Vector2(0, -110));
+        this.vel.add(new Vector2(0, -200));
         this.cost=30;
         this.hp=3;
         this.damage=15;

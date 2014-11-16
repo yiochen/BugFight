@@ -39,13 +39,6 @@ public class BugFightGame extends Game {
 
 	}
 
-//    private void createBug() {
-//        this.bugData=new Rectangle();
-//        this.bugData.width=64;
-//        this.bugData.height=80;
-//        this.bugData.x=0;
-//        this.bugData.y=0;
-//    }
 
 
     @Override
@@ -73,6 +66,7 @@ public class BugFightGame extends Game {
     public void dispose() {
         super.dispose();
         //dispose all texture and music
-
+        this.getScreen().dispose();
     }
+
 }

@@ -33,6 +33,9 @@ public class ClientScreen extends ScreenAdapter implements Renderable{
     public ClientScreen(BugFightGame game){
         this.game=game;
         this.bluetooth=game.blCallback;
+        if (bluetooth!=null){
+            bluetooth.turnOn();
+        }
         camera=new OrthographicCamera();
         camera.setToOrtho(false, Constants.GAME_WIDTH,Constants.GAME_HEIGHT);
         this.font= Assets.font;

@@ -23,6 +23,7 @@ public class ServerScreen extends ScreenAdapter implements Renderable{
     private final BitmapFont font;
     private SpriteBatch batch;
     public ServerScreen(BugFightGame game){
+
         this.game=game;
         this.bluetooth=game.blCallback;
 

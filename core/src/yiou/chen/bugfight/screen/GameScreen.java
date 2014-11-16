@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 
 import java.util.Iterator;
 
+import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
@@ -90,6 +91,7 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
                 Bug bug=it.next();
                 if (bug.getBounds().contains(x,y)){
                     //play explosion
+                    Assets.slap.play();
                     if (!bug.attackBug(Constants.HAND_POWER)){
                         it.remove();
                     }
@@ -120,5 +122,12 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
             }
             return true;
         }
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        render.dispose();
+        bluetooth.cancelTransfer();
     }
 }

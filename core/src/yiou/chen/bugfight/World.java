@@ -74,6 +74,7 @@ public class World implements Updateable{
         }
 
             bugs.add(bug);
+        Assets.pang.play();
 
     }
     /**
@@ -83,6 +84,7 @@ public class World implements Updateable{
      */
     private boolean attackHuman(Bug bug) {
         life-=bug.damage;
+        Assets.pain.play();
         bugs.removeValue(bug,true);
         return life>0;
 

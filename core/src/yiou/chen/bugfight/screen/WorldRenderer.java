@@ -100,4 +100,7 @@ public class WorldRenderer {
             bug.draw(batch);
         }
     }
+    public void dispose(){
+
+    }
 }
