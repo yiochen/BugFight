@@ -5,10 +5,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -19,12 +17,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 
 /**
  * Created by Yiou on 11/9/2014.
  */
-public class AndroidBluetooth implements BlueToothCallback {
+public class AndroidBluetooth implements BluetoothCallback {
     private boolean isConnected;
     private static final String SERVICE_NAME = "bluetooth lets connect";
     private static final String STRING_UUID = "2bae675b-5999-4cc2-ae9c-247b68e20334";

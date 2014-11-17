@@ -16,7 +16,7 @@ import java.util.List;
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
@@ -24,7 +24,7 @@ import yiou.chen.bugfight.interfaces.Renderable;
  */
 public class ClientScreen extends ScreenAdapter implements Renderable{
     private final BugFightGame game;
-    private final BlueToothCallback bluetooth;
+    private final BluetoothCallback bluetooth;
     private final OrthographicCamera camera;
     private final BitmapFont font;
     private List<Rectangle> bounds;

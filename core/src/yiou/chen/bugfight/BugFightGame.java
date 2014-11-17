@@ -1,25 +1,17 @@
 package yiou.chen.bugfight;
 
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.utils.Array;
 
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
-import yiou.chen.bugfight.screen.GameScreen;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 import yiou.chen.bugfight.screen.MainScreen;
 
 public class BugFightGame extends Game {
-    public final BlueToothCallback blCallback;
+    public final BluetoothCallback blCallback;
     public SpriteBatch batch;
 
 
-    public BugFightGame(BlueToothCallback callback){
+    public BugFightGame(BluetoothCallback callback){
         super();
         this.blCallback=callback;
     }

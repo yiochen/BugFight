@@ -10,22 +10,18 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 
-import java.util.Iterator;
-
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 import yiou.chen.bugfight.interfaces.Renderable;
-import yiou.chen.bugfight.interfaces.Updateable;
-import yiou.chen.bugfight.object.Bug;
 
 /**
  * Created by Yiou on 11/9/2014.
  */
 public class MainScreen extends ScreenAdapter implements Renderable{
     private final BugFightGame game;
-    private final BlueToothCallback bluetooth;
+    private final BluetoothCallback bluetooth;
     private final OrthographicCamera camera;
     private final BitmapFont font;
     private SpriteBatch batch;

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Yiou on 11/9/2014.
  */
-public interface BlueToothCallback {
+public interface BluetoothCallback {
     void turnOn();
     void turnOff();
     List<String> getPaiedList();

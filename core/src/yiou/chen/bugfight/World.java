@@ -5,7 +5,6 @@ import com.badlogic.gdx.utils.Array;
 import java.util.Iterator;
 
 
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.object.PowerScale;
 import yiou.chen.bugfight.interfaces.Updateable;

@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
@@ -17,7 +17,7 @@ import yiou.chen.bugfight.interfaces.Renderable;
  */
 public class NormalScreen extends ScreenAdapter implements Renderable {
     protected final BugFightGame game;
-    protected final BlueToothCallback bluetooth;
+    protected final BluetoothCallback bluetooth;
     private final OrthographicCamera camera;
     private final BitmapFont font;
     private SpriteBatch batch;

@@ -11,7 +11,7 @@ import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
-import yiou.chen.bugfight.interfaces.BlueToothCallback;
+import yiou.chen.bugfight.interfaces.BluetoothCallback;
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.interfaces.Renderable;
 import yiou.chen.bugfight.interfaces.Updateable;
@@ -30,7 +30,7 @@ public class GameScreen extends ScreenAdapter implements World.WorldListener,Upd
     private static final int GAME_OVER = 4;
     private final World world;
     private final WorldRenderer render;
-    private final BlueToothCallback bluetooth;
+    private final BluetoothCallback bluetooth;
 
 
     private BugFightGame game;
