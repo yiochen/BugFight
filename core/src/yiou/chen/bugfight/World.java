@@ -1,16 +1,18 @@
 package yiou.chen.bugfight;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.Array;
 
+import java.util.HashMap;
 import java.util.Iterator;
 
 
 import yiou.chen.bugfight.object.Bug;
 import yiou.chen.bugfight.object.PowerScale;
 import yiou.chen.bugfight.interfaces.Updateable;
-import yiou.chen.bugfight.object.bugs.Bug1;
-import yiou.chen.bugfight.object.bugs.Bug2;
-import yiou.chen.bugfight.object.bugs.Bug3;
+import yiou.chen.bugfight.object.bugs.Beetle;
+import yiou.chen.bugfight.object.bugs.Locust;
+import yiou.chen.bugfight.object.bugs.NormalBug;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -22,7 +24,9 @@ public class World implements Updateable{
     public Array<Bug> bugs;
     public PowerScale powerScale;
     public float life=Constants.LIFE;
-    public Array<Bug> prototypes;
+    public static Array<Constants.BUG> types;
+    public static HashMap<Constants.BUG,Bug> prototypes;
+
 
 
     public World(WorldListener listener){
@@ -33,10 +37,19 @@ public class World implements Updateable{
     }
 
     private void makePrototype() {
-        prototypes=new Array<Bug>();
-        prototypes.add(new Bug1(100,70));
-        prototypes.add(new Bug2(200,70));
-        prototypes.add(new Bug3(300,70));
+        types =new Array<Constants.BUG>();
+        prototypes=new HashMap<Constants.BUG,Bug>();
+        types.add(Constants.BUG.NORMAL);
+        prototypes.put(Constants.BUG.NORMAL,new NormalBug(0, 0));
+        types.add(Constants.BUG.BEETLE);
+        prototypes.put(Constants.BUG.BEETLE,new Beetle(0, 0));
+        types.add(Constants.BUG.LOCUST);
+        prototypes.put(Constants.BUG.LOCUST,new Locust(0, 0));
+        types.add(Constants.BUG.LADYBUG);
+        prototypes.put(Constants.BUG.LADYBUG,new Bug(0, 0, 0, 0));
+    }
+    public static Bug type2prototype(Constants.BUG type){
+        return prototypes.get(type);
     }
 
     /**
@@ -62,13 +75,13 @@ public class World implements Updateable{
         Bug bug;
         float x=(float)Math.random()*(Constants.GAME_WIDTH-Constants.SPOWN_EDGE*2)+Constants.SPOWN_EDGE;
         switch(type){
-            case 0:bug=new Bug1(x,1000);
+            case 0:bug=new NormalBug(x,1000);
                 break;
-            case 1:bug=new Bug2(x,1000);
+            case 1:bug=new Beetle(x,1000);
                 break;
-            case 2:bug=new Bug3(x,1000);
+            case 2:bug=new Locust(x,1000);
                 break;
-            default:bug=new Bug1(x,1000);
+            default:bug=new NormalBug(x,1000);
                 break;
         }
 

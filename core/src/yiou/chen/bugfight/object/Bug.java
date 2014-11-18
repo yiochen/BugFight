@@ -17,7 +17,7 @@ public class Bug extends DynamicGameObject implements Renderable {
     public Texture asset;
     public Bug(float x, float y, float width, float height) {
         super(x, y, width, height, GameObject.TOTAL_INSIDE);
-        asset=Assets.bug1;
+        asset=Assets.normal;
     }
 
     /**

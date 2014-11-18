@@ -1,13 +1,7 @@
 package yiou.chen.bugfight.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputAdapter;
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 
 import java.util.ArrayList;
@@ -16,30 +10,21 @@ import java.util.List;
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
-import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
  * Created by Yiou on 11/9/2014.
  */
-public class ClientScreen extends ScreenAdapter implements Renderable{
-    private final BugFightGame game;
-    private final BluetoothCallback bluetooth;
-    private final OrthographicCamera camera;
-    private final BitmapFont font;
+public class ClientScreen extends AbstractScreen {
+
     private List<Rectangle> bounds;
     private List<String> names;
-    private SpriteBatch batch;
+
     public ClientScreen(BugFightGame game){
-        this.game=game;
-        this.bluetooth=game.blCallback;
+        super(game);
         if (bluetooth!=null){
             bluetooth.turnOn();
         }
-        camera=new OrthographicCamera();
-        camera.setToOrtho(false, Constants.GAME_WIDTH,Constants.GAME_HEIGHT);
-        this.font= Assets.font;
-        Gdx.input.setInputProcessor(new InputListener());
+
         this.bounds=new ArrayList<Rectangle>();
         this.names=new ArrayList<String>();
         if (bluetooth!=null){
@@ -48,13 +33,21 @@ public class ClientScreen extends ScreenAdapter implements Renderable{
     }
 
     @Override
+    protected void drawBackground() {
+        super.drawBackground();
+        drawBatch(Assets.grass,Assets.rGrass);
+    }
+
+    @Override
     public void render(float delta) {
-        if (bluetooth!=null && bluetooth.isConnected()){
+        super.render(delta);
+        if (status==Constants.STATUS.PREPARE && bluetooth!=null && bluetooth.isConnected()){
+            status= Constants.STATUS.RUNNING;
+        }
+        if (status==Constants.STATUS.RUNNING){
+            bluetooth.write(10);
             game.setScreen(new GameScreen(game));
         }
-        this.batch=game.batch;
-        camera.update();
-        batch.setProjectionMatrix(camera.combined);
         batch.begin();
         draw(batch);
         batch.end();
@@ -62,7 +55,7 @@ public class ClientScreen extends ScreenAdapter implements Renderable{
 
     @Override
     public void draw(Batch batch) {
-        drawBackground();
+        super.draw(batch);
         drawList();
     }
 
@@ -71,7 +64,7 @@ public class ClientScreen extends ScreenAdapter implements Renderable{
         font.setScale(1, 1);
        for (int i=0; i<names.size();i++){
 
-           batch.draw(Assets.panel, 0, Constants.GAME_HEIGHT / 2 -i*40, 300, 20);
+           batch.draw(Assets.bugPanel, 0, Constants.GAME_HEIGHT / 2 -i*40, 300, 20);
            Rectangle bound=new Rectangle(0, Constants.GAME_HEIGHT / 2-i*40, 300, 20);
            bounds.add(bound);
            font.draw(batch,names.get(i),0,Constants.GAME_HEIGHT/2+20-i*40);
@@ -79,25 +72,17 @@ public class ClientScreen extends ScreenAdapter implements Renderable{
        }
     }
 
-    private void drawBackground() {
-        batch.draw(Assets.background, 0, 0, Constants.GAME_WIDTH, Constants.GAME_HEIGHT);
-    }
-
-    private class InputListener extends InputAdapter {
-        @Override
-        public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-            float y = screenY;
-            float x = screenX;
-            y = Constants.GAME_HEIGHT - y / Gdx.graphics.getHeight() * Constants.GAME_HEIGHT;
-            x = x / Gdx.graphics.getWidth() * Constants.GAME_WIDTH;
-            for (int i=0;i<bounds.size();i++){
-                if  (bounds.get(i).contains(x,y)){
+    @Override
+    public boolean onTouch(float x, float y) {
+        for (int i=0;i<bounds.size();i++){
+            if  (bounds.get(i).contains(x,y)){
+                if (bluetooth!=null) {
                     bluetooth.chooseDevice(names.get(i));
                     bluetooth.connectAsClient();
                     break;
                 }
             }
-            return true;
         }
+        return true;
     }
 }

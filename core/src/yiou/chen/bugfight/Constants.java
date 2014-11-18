@@ -19,5 +19,13 @@ public class Constants {
     public static float SPOWN_EDGE=70;
     public static int HAND_POWER=1;
     public static float endLine=PANEL_HEIGHT+POWER_BAR_HEIGHT;
-
+    public static enum STATUS{
+        PREPARE,RUNNING,PAUSE,GAME_OVER,DESTROY
+    }
+    public static enum BUG{
+        NORMAL,BEETLE,LOCUST,LADYBUG
+    }
+    public static float TEXT_L=1f;
+    public static float TEXT_M=0.75f;
+    public static float TEXT_S=0.5f;
 }

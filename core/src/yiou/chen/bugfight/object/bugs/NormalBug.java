@@ -9,13 +9,13 @@ import yiou.chen.bugfight.object.Bug;
  * normal cheep bug
  * Created by Yiou on 11/9/2014.
  */
-public class Bug1 extends Bug {
-    public Bug1(float x, float y) {
+public class NormalBug extends Bug {
+    public NormalBug(float x, float y) {
         super(x, y, 64,80);
         this.vel.add(new Vector2(0,-45));
         this.cost=10;
         this.hp=1;
         this.damage=10;
-        this.asset= Assets.bug1;
+        this.asset= Assets.normal;
     }
 }

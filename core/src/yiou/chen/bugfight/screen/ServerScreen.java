@@ -16,34 +16,30 @@ import yiou.chen.bugfight.interfaces.Renderable;
 /**
  * Created by Yiou on 11/9/2014.
  */
-public class ServerScreen extends ScreenAdapter implements Renderable{
-    private final BugFightGame game;
-    private final BluetoothCallback bluetooth;
-    private final OrthographicCamera camera;
-    private final BitmapFont font;
-    private SpriteBatch batch;
-    public ServerScreen(BugFightGame game){
+public class ServerScreen extends AbstractScreen {
 
-        this.game=game;
-        this.bluetooth=game.blCallback;
+    private boolean clientConnected = false;
 
-        if (bluetooth!=null){
+    public ServerScreen(BugFightGame game) {
+        super(game);
+        if (this.bluetooth != null) {
             bluetooth.turnOn();
             bluetooth.openServer();
         }
-        camera=new OrthographicCamera();
-        camera.setToOrtho(false, Constants.GAME_WIDTH,Constants.GAME_HEIGHT);
-        this.font= Assets.font;
     }
 
     @Override
     public void render(float delta) {
-        if (bluetooth!=null && bluetooth.isConnected()){
-            game.setScreen(new GameScreen(game));
+        super.render(delta);
+        if (status == Constants.STATUS.PREPARE && bluetooth != null && bluetooth.isConnected()) {
+            status = Constants.STATUS.RUNNING;
         }
-        this.batch=game.batch;
-        camera.update();
-        batch.setProjectionMatrix(camera.combined);
+        if (status == Constants.STATUS.RUNNING) {
+            if (bluetooth.read() == 10) {
+                clientConnected = true;
+            }
+        }
+        if (clientConnected) game.setScreen(new GameScreen(game));
         batch.begin();
         draw(batch);
         batch.end();
@@ -51,15 +47,22 @@ public class ServerScreen extends ScreenAdapter implements Renderable{
 
     @Override
     public void draw(Batch batch) {
-        drawBackground();
+        super.draw(batch);
         drawMessage();
     }
-    private void drawBackground() {
-        batch.draw(Assets.background, 0, 0, Constants.GAME_WIDTH, Constants.GAME_HEIGHT);
+    @Override
+    protected void drawBackground() {
+        super.drawBackground();
+        drawBatch(Assets.grass,Assets.rGrass);
     }
     private void drawMessage() {
         font.setColor(Color.WHITE);
-        font.setScale(2,2);
-        font.draw(batch,"Waiting for opponent",0,Constants.GAME_HEIGHT/2);
+        //font.setScale(2,2);
+        font.draw(batch, "Waiting for opponent", 0, Constants.GAME_HEIGHT / 2);
+    }
+
+    @Override
+    public boolean onTouch(float x, float y) {
+        return true;
     }
 }
