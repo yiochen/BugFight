@@ -5,7 +5,9 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.util.Log;
 
 import java.io.DataInputStream;
@@ -24,20 +26,22 @@ import yiou.chen.bugfight.interfaces.BluetoothCallback;
  */
 public class AndroidBluetooth implements BluetoothCallback {
     private boolean isConnected;
+    private final int timeOut=10000;
     private static final String SERVICE_NAME = "bluetooth lets connect";
     private static final String STRING_UUID = "2bae675b-5999-4cc2-ae9c-247b68e20334";
 
     private final BluetoothAdapter mBluetoothAdapter;
     private final String TAG="Bluetooth";
-    private final Application context;
+    private final Context context;
     private boolean blAvailable;
     private Set<BluetoothDevice> pairedDevices;
     private BluetoothDevice mChosenDevice;
     private TransferThread mTransferThread;
     private AcceptThread acceptThread;
     private ConnectThread connectThread;
+    private Handler uiThread;
+    public AndroidBluetooth(Context context){
 
-    public AndroidBluetooth(Application context){
         //take an instance of BluetoothAdapter - Bluetooth radio
         this.context=context;
         pairedDevices=new HashSet<BluetoothDevice>();
@@ -48,18 +52,26 @@ public class AndroidBluetooth implements BluetoothCallback {
         }else{
             blAvailable=true;
         }
-
+        uiThread=new Handler();
     }
 
     @Override
     public void turnOn() {
         if (!mBluetoothAdapter.isEnabled()) {
-            Intent turnOnIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            context.startActivity(turnOnIntent);
+
+                    Intent turnOnIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    context.startActivity(turnOnIntent);
+
+
             Log.i(TAG,"turning on bluetooth");
         } else {
             Log.i(TAG,"as I told you bluetooth not available");
         }
+    }
+
+    @Override
+    public boolean isBluetoothOn() {
+        return mBluetoothAdapter.isEnabled();
     }
 
     @Override
@@ -159,6 +171,14 @@ public class AndroidBluetooth implements BluetoothCallback {
 
         public AcceptThread() {
             BluetoothServerSocket tmp = null;
+            long time= System.currentTimeMillis();
+            while(!mBluetoothAdapter.isEnabled()){
+                if (System.currentTimeMillis()-time>timeOut){
+                    isConnected=false;
+                    mServerSocket=null;
+                    return;
+                }
+            }
             try {
                 tmp = mBluetoothAdapter.listenUsingInsecureRfcommWithServiceRecord(SERVICE_NAME, UUID.fromString(STRING_UUID));
                 Log.i("Server", "server created!");

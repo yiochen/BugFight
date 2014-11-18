@@ -22,6 +22,11 @@ public class DummyBluetooth implements BluetoothCallback {
     }
 
     @Override
+    public boolean isBluetoothOn() {
+        return false;
+    }
+
+    @Override
     public List<String> getPaiedList() {
         return new ArrayList<String>();
     }

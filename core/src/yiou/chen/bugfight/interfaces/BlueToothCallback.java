@@ -8,6 +8,7 @@ import java.util.List;
 public interface BluetoothCallback {
     void turnOn();
     void turnOff();
+    boolean isBluetoothOn();
     List<String> getPaiedList();
     void chooseDevice(String description);
     void openServer();

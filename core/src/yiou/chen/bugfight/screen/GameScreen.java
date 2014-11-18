@@ -120,9 +120,9 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
         Bug bug=World.type2prototype(type);
         Color color=batch.getColor();
         if (power<bug.cost){
-            batch.setColor(Color.WHITE);
+            batch.setColor(Color.DARK_GRAY);
         }else{
-            batch.setColor(Color.YELLOW);
+            batch.setColor(Color.WHITE);
         }
         drawBatch(prototypeUI.get(type),prototypeRect.get(type));
         batch.setColor(color);

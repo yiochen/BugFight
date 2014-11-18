@@ -58,6 +58,7 @@ public class Assets {
     public static Rectangle rNormal;
     public static Rectangle rBeetle;
     public static Rectangle rLady;
+    public static Rectangle rHP;
 
     public static Texture loadTexture(String file){
         return new Texture(Gdx.files.internal(file));
@@ -115,6 +116,7 @@ public class Assets {
         rHPPanel=new Rectangle(180,0,361,133);
         hpBar=loadTexture("data/HP.png");
         rHPBar=new Rectangle(238,19,228,32);
+        rHP=new Rectangle(250,27,205,17);
         hpIndicator=loadTexture("data/HP_indicator.png");
         rHPIndicator=new Rectangle(325,3,49,59);
 
