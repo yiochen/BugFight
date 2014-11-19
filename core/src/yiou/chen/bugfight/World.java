@@ -1,16 +1,16 @@
 package yiou.chen.bugfight;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.Array;
 
 import java.util.HashMap;
 import java.util.Iterator;
 
 
-import yiou.chen.bugfight.object.Bug;
+import yiou.chen.bugfight.object.bugs.Bug;
 import yiou.chen.bugfight.object.PowerScale;
 import yiou.chen.bugfight.interfaces.Updateable;
 import yiou.chen.bugfight.object.bugs.Beetle;
+import yiou.chen.bugfight.object.bugs.Ladybug;
 import yiou.chen.bugfight.object.bugs.Locust;
 import yiou.chen.bugfight.object.bugs.NormalBug;
 
@@ -46,7 +46,7 @@ public class World implements Updateable{
         types.add(Constants.BUG.LOCUST);
         prototypes.put(Constants.BUG.LOCUST,new Locust(0, 0));
         types.add(Constants.BUG.LADYBUG);
-        prototypes.put(Constants.BUG.LADYBUG,new Bug(0, 0, 0, 0));
+        prototypes.put(Constants.BUG.LADYBUG,new Ladybug(0, 0));
     }
     public static Bug type2prototype(Constants.BUG type){
         return prototypes.get(type);
@@ -81,12 +81,15 @@ public class World implements Updateable{
                 break;
             case 2:bug=new Locust(x,1000);
                 break;
+            case 3:bug=new Ladybug(x,1000);
+                break;
             default:bug=new NormalBug(x,1000);
                 break;
         }
 
             bugs.add(bug);
         Assets.pang.play();
+        bug.onCreated();
 
     }
     /**

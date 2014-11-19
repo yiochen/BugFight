@@ -3,7 +3,6 @@ package yiou.chen.bugfight.object.bugs;
 import com.badlogic.gdx.math.Vector2;
 
 import yiou.chen.bugfight.Assets;
-import yiou.chen.bugfight.object.Bug;
 
 /**
  * normal cheep bug
@@ -11,8 +10,8 @@ import yiou.chen.bugfight.object.Bug;
  */
 public class NormalBug extends Bug {
     public NormalBug(float x, float y) {
-        super(x, y, 64,80);
-        this.vel.add(new Vector2(0,-45));
+        super(x, y, Assets.sNormal.x,Assets.sNormal.y);
+        this.vel.add(new Vector2(0,-200));
         this.cost=10;
         this.hp=1;
         this.damage=10;

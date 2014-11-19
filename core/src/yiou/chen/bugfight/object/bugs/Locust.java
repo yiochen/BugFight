@@ -3,7 +3,6 @@ package yiou.chen.bugfight.object.bugs;
 import com.badlogic.gdx.math.Vector2;
 
 import yiou.chen.bugfight.Assets;
-import yiou.chen.bugfight.object.Bug;
 
 /**
  * fast bug
@@ -12,8 +11,8 @@ import yiou.chen.bugfight.object.Bug;
 public class Locust extends Bug {
 
     public Locust(float x, float y) {
-        super(x, y, 64,100);
-        this.vel.add(new Vector2(0, -200));
+        super(x, y, Assets.sLocust.x,Assets.sLocust.y);
+        this.vel.add(new Vector2(0, -500));
         this.cost=30;
         this.hp=3;
         this.damage=15;

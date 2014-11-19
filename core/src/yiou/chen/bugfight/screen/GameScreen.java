@@ -13,11 +13,8 @@ import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
-import yiou.chen.bugfight.object.Bug;
+import yiou.chen.bugfight.object.bugs.Bug;
 import yiou.chen.bugfight.interfaces.Updateable;
-import yiou.chen.bugfight.object.bugs.Beetle;
-import yiou.chen.bugfight.object.bugs.Locust;
-import yiou.chen.bugfight.object.bugs.NormalBug;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -107,9 +104,7 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
     public void drawController() {
         drawPanel();
         renderPower(world.powerScale.scale / 100);
-        font.setColor(Color.WHITE);
-        font.setScale((float)1,(float)2);
-        font.draw(batch,"HP",0,Constants.LIFE_BAR_Y);
+
         drawBatch(Assets.hpPanel,Assets.rHPPanel);
         renderLife(world.life / Constants.LIFE, 0.5f);
         drawBatch(Assets.hpBar,Assets.rHPBar);
@@ -134,6 +129,12 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
         }
     }
     private void renderLife(float myLife,float yourLife){
+        if (myLife<=0){
+            myLife=0;
+            drawLeftText("You Lost",1280,10,Constants.TEXT_M);
+            status= Constants.STATUS.PAUSE;
+        }else
+        drawLeftText("HP: "+myLife,1280,10,Constants.TEXT_M);
 
     }
     private void renderPower(float scale) {
@@ -152,7 +153,11 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
                 Assets.slap.play();
                 if (!bug.attackBug(Constants.HAND_POWER)){
                     it.remove();
+                    bug.onDie();
+                }else{
+                    bug.onTap();
                 }
+                return true;
             }
         }
 

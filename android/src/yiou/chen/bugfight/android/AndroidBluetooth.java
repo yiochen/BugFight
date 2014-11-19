@@ -1,5 +1,7 @@
 package yiou.chen.bugfight.android;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -7,8 +9,11 @@ import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -25,53 +30,79 @@ import yiou.chen.bugfight.interfaces.BluetoothCallback;
  * Created by Yiou on 11/9/2014.
  */
 public class AndroidBluetooth implements BluetoothCallback {
-    private boolean isConnected;
-    private final int timeOut=10000;
+    private boolean isConnected=false;
+    private final int timeOut = 60000;
     private static final String SERVICE_NAME = "bluetooth lets connect";
     private static final String STRING_UUID = "2bae675b-5999-4cc2-ae9c-247b68e20334";
 
     private final BluetoothAdapter mBluetoothAdapter;
-    private final String TAG="Bluetooth";
-    private final Context context;
+    private final String TAG = "Bluetooth";
+    private Activity context;
     private boolean blAvailable;
     private Set<BluetoothDevice> pairedDevices;
     private BluetoothDevice mChosenDevice;
     private TransferThread mTransferThread;
     private AcceptThread acceptThread;
     private ConnectThread connectThread;
-    private Handler uiThread;
-    public AndroidBluetooth(Context context){
+    private Handler uiThread = AndroidLauncher.uiThread;
+
+    public AndroidBluetooth(Activity context) {
 
         //take an instance of BluetoothAdapter - Bluetooth radio
-        this.context=context;
-        pairedDevices=new HashSet<BluetoothDevice>();
+        this.context = context;
+        pairedDevices = new HashSet<BluetoothDevice>();
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
-            Log.e(TAG,"your device doesn't support bluetooth");
-            blAvailable=false;
-        }else{
-            blAvailable=true;
+            Log.e(TAG, "your device doesn't support bluetooth");
+            blAvailable = false;
+        } else {
+            blAvailable = true;
         }
-        uiThread=new Handler();
-    }
 
+
+    }
+    public void makeToast(final CharSequence sequence,final int length){
+        uiThread.post(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(AndroidBluetooth.this.context, sequence, length).show();
+            }
+        });
+    }
     @Override
     public void turnOn() {
+
         if (!mBluetoothAdapter.isEnabled()) {
-
+            uiThread.post(new Runnable() {
+                /**
+                 * Starts executing the active part of the class' code. This method is
+                 * called when a thread is started that has been created with a class which
+                 * implements {@code Runnable}.
+                 */
+                @Override
+                public void run() {
+                    Toast.makeText(AndroidBluetooth.this.context, "turning on bluetooth", Toast.LENGTH_LONG).show();
                     Intent turnOnIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                    context.startActivity(turnOnIntent);
-
-
-            Log.i(TAG,"turning on bluetooth");
+                    context.startActivityForResult(turnOnIntent, 1);
+                }
+            });
         } else {
-            Log.i(TAG,"as I told you bluetooth not available");
+            uiThread.post(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(AndroidBluetooth.this.context, "Bluetooth failed", Toast.LENGTH_LONG).show();
+                }
+            });
+
+            Log.i(TAG, "as I told you bluetooth not available");
         }
     }
 
     @Override
     public boolean isBluetoothOn() {
+
         return mBluetoothAdapter.isEnabled();
+
     }
 
     @Override
@@ -81,23 +112,24 @@ public class AndroidBluetooth implements BluetoothCallback {
 
     @Override
     public List<String> getPaiedList() {
-        pairedDevices=mBluetoothAdapter.getBondedDevices();
-        ArrayList<String> tmp=new ArrayList<String>();
-        for (BluetoothDevice device:pairedDevices){
+        pairedDevices = mBluetoothAdapter.getBondedDevices();
+        ArrayList<String> tmp = new ArrayList<String>();
+        for (BluetoothDevice device : pairedDevices) {
             tmp.add(getDescription(device));
         }
         return tmp;
     }
-    public String getDescription(BluetoothDevice device){
-        return device.getName()+"\n"+device.getAddress();
+
+    public String getDescription(BluetoothDevice device) {
+        return device.getName() + "\n" + device.getAddress();
     }
 
     @Override
     public void chooseDevice(String description) {
 
-        for (BluetoothDevice device:pairedDevices){
-            if (getDescription(device).equals(description)){
-                mChosenDevice=device;
+        for (BluetoothDevice device : pairedDevices) {
+            if (getDescription(device).equals(description)) {
+                mChosenDevice = device;
                 return;
             }
         }
@@ -106,36 +138,35 @@ public class AndroidBluetooth implements BluetoothCallback {
 
     @Override
     public void openServer() {
-        acceptThread=new AcceptThread();
+        acceptThread = new AcceptThread();
         acceptThread.start();
     }
 
     @Override
     public void connectAsClient() {
-        if (mChosenDevice!=null){
-            connectThread=new ConnectThread(mChosenDevice);
+        if (mChosenDevice != null) {
+            connectThread = new ConnectThread(mChosenDevice);
             connectThread.start();
 
-        }else{
-            Log.e("TAG","please choose a server device first");
+        } else {
+            Log.e("TAG", "please choose a server device first");
         }
     }
 
     @Override
     public void write(int value) {
-        if (mTransferThread!=null){
+        if (mTransferThread != null) {
             mTransferThread.write(value);
         }
     }
 
     @Override
     public int read() {
-        if (mTransferThread!=null){
+        if (mTransferThread != null) {
             return mTransferThread.read();
         }
         return 0;
     }
-
 
 
     @Override
@@ -145,13 +176,13 @@ public class AndroidBluetooth implements BluetoothCallback {
 
     @Override
     public void cancelConnect() {
-        isConnected=false;
+        isConnected = false;
         connectThread.cancel();
     }
 
     @Override
     public void cancelTransfer() {
-        isConnected=false;
+        isConnected = false;
         mTransferThread.cancel();
     }
 
@@ -171,31 +202,27 @@ public class AndroidBluetooth implements BluetoothCallback {
 
         public AcceptThread() {
             BluetoothServerSocket tmp = null;
-            long time= System.currentTimeMillis();
-            while(!mBluetoothAdapter.isEnabled()){
-                if (System.currentTimeMillis()-time>timeOut){
-                    isConnected=false;
-                    mServerSocket=null;
-                    return;
-                }
-            }
+
             try {
                 tmp = mBluetoothAdapter.listenUsingInsecureRfcommWithServiceRecord(SERVICE_NAME, UUID.fromString(STRING_UUID));
                 Log.i("Server", "server created!");
-                isConnected=true;
+                isConnected = true;
             } catch (IOException e) {
-                isConnected=false;
+                isConnected = false;
                 e.printStackTrace();
             }
             mServerSocket = tmp;
         }
 
         public void run() {
+
             BluetoothSocket socket = null;
             //Keep listening until exception occurs or a socket is returned
             while (true) {
                 try {
-                    socket = mServerSocket.accept();
+                    if (mServerSocket!=null) {
+                        socket = mServerSocket.accept();
+                    }
                 } catch (IOException e) {
                     break;
                 }
@@ -245,24 +272,29 @@ public class AndroidBluetooth implements BluetoothCallback {
             //Get a BluetoothSocket to connect with the given BluetoothDevice
             try {
                 tmp = device.createRfcommSocketToServiceRecord(UUID.fromString(STRING_UUID));
+                isConnected = false;
             } catch (IOException e) {
+                isConnected=false;
                 e.printStackTrace();
             }
             mSocket = tmp;
         }
 
+        @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
         public void run() {
             //Cancel discovery because it will slow down the connection
+
             mBluetoothAdapter.cancelDiscovery();
             Log.i("Client", "trying to connect to server");
             try {
                 mSocket.connect();
                 Log.i("Client", "connected");
-                isConnected=true;
+
+                isConnected = mSocket.isConnected();
 
             } catch (IOException connectException) {
                 Log.i("Client", "fail io connect");
-                isConnected=false;
+                isConnected = false;
 
                 try {
                     mSocket.close();
@@ -272,8 +304,12 @@ public class AndroidBluetooth implements BluetoothCallback {
                 return;
             }
             //manageConnectedSocket(mSocket);
-            mTransferThread = new TransferThread(mSocket);
-            mTransferThread.start();
+            if (isConnected()) {
+                mTransferThread = new TransferThread(mSocket);
+                mTransferThread.start();
+            }else{
+                makeToast("Please try connecting again",Toast.LENGTH_LONG);
+            }
         }
 
         public void cancel() {
@@ -292,7 +328,7 @@ public class AndroidBluetooth implements BluetoothCallback {
         private final BluetoothSocket mSocket;
         private final DataInputStream mInStream;
         private final DataOutputStream mOutStream;
-        public int readInInt=0;
+        public int readInInt = 0;
 
         public TransferThread(BluetoothSocket socket) {
             mSocket = socket;
@@ -321,26 +357,26 @@ public class AndroidBluetooth implements BluetoothCallback {
             while (true) {
                 try {
                     //Read from the InputStrea,
-                    bytes=mInStream.readInt();
-                    readInInt=bytes;
+                    bytes = mInStream.readInt();
+                    readInInt = bytes;
                     //Send the obtained bytes to the UI activity;
                     Log.i("TRANSFER", "received " + bytes);
                 } catch (IOException e) {
-                   // e.printStackTrace();
+                    // e.printStackTrace();
                     break;
                 }
             }
         }
 
         /**
-         *
          * @return default return 0 if no data is read
          */
-        public int read(){
-            int ans=readInInt;
-            readInInt=0;
+        public int read() {
+            int ans = readInInt;
+            readInInt = 0;
             return ans;
         }
+
         /**
          * Call this from the main activity to send data to the remote device
          */

@@ -1,4 +1,4 @@
-package yiou.chen.bugfight.object;
+package yiou.chen.bugfight.object.bugs;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.interfaces.Renderable;
+import yiou.chen.bugfight.object.DynamicGameObject;
+import yiou.chen.bugfight.object.GameObject;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -39,4 +41,10 @@ public class Bug extends DynamicGameObject implements Renderable {
     public void draw(Batch batch) {
         batch.draw(asset, getBounds().getX(), getBounds().getY(), getBounds().getWidth(), getBounds().getHeight());
     }
+
+    public void onTap(){
+
+    }
+    public void onCreated(){}
+    public void onDie(){}
 }

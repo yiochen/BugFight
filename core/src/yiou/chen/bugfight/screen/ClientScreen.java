@@ -21,8 +21,9 @@ public class ClientScreen extends AbstractScreen {
 
     public ClientScreen(BugFightGame game) {
         super(game);
-        if (bluetooth != null) {
+        if (!bluetooth.isBluetoothOn()) {
             bluetooth.turnOn();
+
         }
 
         this.bounds = new ArrayList<Rectangle>();
@@ -42,10 +43,12 @@ public class ClientScreen extends AbstractScreen {
         if (status == Constants.STATUS.PREPARE && bluetooth != null && bluetooth.isBluetoothOn()) {
 
             names = bluetooth.getPaiedList();
-
-            status = Constants.STATUS.RUNNING;
+            status=Constants.STATUS.RUNNING;
         }
-        if (status == Constants.STATUS.RUNNING && bluetooth.isConnected()) {
+        if (status==Constants.STATUS.RUNNING && bluetooth !=null&& bluetooth.isBluetoothOn()){
+            names = bluetooth.getPaiedList();
+        }
+        if (status == Constants.STATUS.BL_OK && bluetooth != null && bluetooth.isBluetoothOn() && bluetooth.isConnected()) {
             bluetooth.write(10);
             game.setScreen(new GameScreen(game));
         }
@@ -64,23 +67,26 @@ public class ClientScreen extends AbstractScreen {
         font.setColor(Color.WHITE);
         font.setScale(1, 1);
         for (int i = 0; i < names.size(); i++) {
-
-            batch.draw(Assets.bugPanel, 0, Constants.GAME_HEIGHT / 2 - i * 40, 300, 20);
-            Rectangle bound = new Rectangle(0, Constants.GAME_HEIGHT / 2 - i * 40, 300, 20);
+            Rectangle bound = drawLeftText(names.get(i),1200-i*104,10,Constants.TEXT_M);
             bounds.add(bound);
-            font.draw(batch, names.get(i), 0, Constants.GAME_HEIGHT / 2 + 20 - i * 40);
-
         }
     }
 
     @Override
     public boolean onTouch(float x, float y) {
-        for (int i = 0; i < bounds.size(); i++) {
-            if (bounds.get(i).contains(x, y)) {
-                if (bluetooth != null) {
-                    bluetooth.chooseDevice(names.get(i));
-                    bluetooth.connectAsClient();
-                    break;
+        bluetooth.write(10);
+        if (status== Constants.STATUS.RUNNING ||status==Constants.STATUS.BL_OK) {
+            for (int i = 0; i < bounds.size(); i++) {
+                if (bounds.get(i).contains(x, y)) {
+                    if (bluetooth.isBluetoothOn()) {
+                        bluetooth.chooseDevice(names.get(i));
+                        bluetooth.connectAsClient();
+                        status = Constants.STATUS.BL_OK;
+                        break;
+                    }else{
+                        bluetooth.turnOn();
+                        status=Constants.STATUS.RUNNING;
+                    }
                 }
             }
         }

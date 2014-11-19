@@ -3,7 +3,6 @@ package yiou.chen.bugfight.object.bugs;
 import com.badlogic.gdx.math.Vector2;
 
 import yiou.chen.bugfight.Assets;
-import yiou.chen.bugfight.object.Bug;
 
 /**
  * big high hp bug
@@ -12,8 +11,8 @@ import yiou.chen.bugfight.object.Bug;
 public class Beetle extends Bug {
 
     public Beetle(float x, float y) {
-        super(x, y, 100,130);
-        this.vel.add(new Vector2(0, -30));
+        super(x, y, Assets.sBeetle.x,Assets.sBeetle.y);
+        this.vel.add(new Vector2(0, -100));
         this.cost=20;
         this.hp=10;
         this.damage=10;

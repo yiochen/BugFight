@@ -10,7 +10,7 @@ import yiou.chen.bugfight.interfaces.BluetoothCallback;
  */
 public class DummyBluetooth implements BluetoothCallback {
     private int bug=0;
-
+    private boolean started=false;
     @Override
     public void turnOn() {
 
@@ -23,7 +23,7 @@ public class DummyBluetooth implements BluetoothCallback {
 
     @Override
     public boolean isBluetoothOn() {
-        return false;
+        return true;
     }
 
     @Override
@@ -53,6 +53,10 @@ public class DummyBluetooth implements BluetoothCallback {
 
     @Override
     public int read() {
+        if (!started){
+            started=true;
+            return 10;
+        }
         if (bug!=0) {
             int tmp=bug;
             bug=0;

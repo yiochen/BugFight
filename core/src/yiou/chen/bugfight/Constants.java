@@ -20,7 +20,7 @@ public class Constants {
     public static int HAND_POWER=1;
     public static float endLine=PANEL_HEIGHT+POWER_BAR_HEIGHT;
     public static enum STATUS{
-        PREPARE,RUNNING,PAUSE,GAME_OVER,DESTROY
+        PREPARE,RUNNING,PAUSE,GAME_OVER,DESTROY, BL_OK,BL_DOWN
     }
     public static enum BUG{
         NORMAL,BEETLE,LOCUST,LADYBUG

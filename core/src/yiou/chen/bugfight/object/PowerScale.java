@@ -32,7 +32,7 @@ public class PowerScale implements Updateable {
      */
     protected boolean fullCheck() {
         if (scale>100) {
-            scale=0;
+            scale=100;
             return true;
         }
         return false;

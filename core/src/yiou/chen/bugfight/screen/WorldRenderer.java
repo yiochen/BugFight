@@ -1,6 +1,5 @@
 package yiou.chen.bugfight.screen;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -8,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
-import yiou.chen.bugfight.object.Bug;
+import yiou.chen.bugfight.object.bugs.Bug;
 //TODO refactor worldRenderer
 
 /**

@@ -47,16 +47,10 @@ public class MainScreen extends AbstractScreen{
 
     private void drawOptions() {
         font.setColor(Color.WHITE);
-        font.setScale(Constants.TEXT_L);
-
-        batch.draw(Assets.bugPanel, 0, Constants.GAME_HEIGHT / 2 - 110, 300, 20);
-        optionBound1=new Rectangle(0, Constants.GAME_HEIGHT / 2 - 110, 300, 20);
-        batch.draw(Assets.bugPanel,0,Constants.GAME_HEIGHT/2-140,300,20);
-        optionBound2=new Rectangle(0,Constants.GAME_HEIGHT/2-140,300,20);
-        font.draw(batch,"Open as Server",0,Constants.GAME_HEIGHT/2-90);
-        font.setScale(Constants.TEXT_M);
-        font.draw(batch,"Connect to",0,Constants.GAME_HEIGHT/2-120);
-
+        Rectangle op1=drawCenterText("Open server",562,Constants.TEXT_L);
+        optionBound1=op1 ;
+        Rectangle op2=drawCenterText("Connect to",422,Constants.TEXT_L);
+        optionBound2=op2;
     }
 
     private void drawTitle() {

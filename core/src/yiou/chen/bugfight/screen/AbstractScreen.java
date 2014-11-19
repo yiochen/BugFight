@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 
 import yiou.chen.bugfight.Assets;
@@ -72,5 +73,27 @@ public abstract class AbstractScreen extends ScreenAdapter implements Renderable
     }
     private void updateBluetooth() {
 
+    }
+    public Rectangle drawCenterText(CharSequence seq,int topY,float scale){
+        font.setScale(scale);
+
+        BitmapFont.TextBounds bounds=font.getBounds(seq);
+        float width=bounds.width;
+        float height=bounds.height;
+        float x=((float)Constants.GAME_WIDTH-width)/2;
+        float y=topY-height;
+        font.draw(batch,seq,x,topY);
+        return new Rectangle(x,y,width,height);
+    }
+    public Rectangle drawLeftText(CharSequence seq, int topY, int leftMargin, float scale){
+        font.setScale(scale);
+
+        BitmapFont.TextBounds bounds=font.getBounds(seq);
+        float width=bounds.width;
+        float height=bounds.height;
+        float x=leftMargin;
+        float y=topY-height;
+        font.draw(batch,seq,x,topY);
+        return new Rectangle(x,y,width,height);
     }
 }

@@ -22,15 +22,16 @@ public class ServerScreen extends AbstractScreen {
 
     public ServerScreen(BugFightGame game) {
         super(game);
-        if (this.bluetooth != null) {
+       // if (this.bluetooth != null) {
             if (bluetooth.isBluetoothOn()){
                 bluetooth.openServer();
                 status= Constants.STATUS.RUNNING;
             }else {
+
                 bluetooth.turnOn();
-                status= Constants.STATUS.PREPARE;
+
             }
-        }
+        //}
     }
 
     @Override
@@ -38,6 +39,7 @@ public class ServerScreen extends AbstractScreen {
         super.render(delta);
         if (status == Constants.STATUS.PREPARE && bluetooth != null && bluetooth.isBluetoothOn()) {
             bluetooth.openServer();
+            status= Constants.STATUS.RUNNING;
         }
         if (status == Constants.STATUS.RUNNING&&bluetooth.isConnected()) {
             if (bluetooth.read() == 10) {
