@@ -5,10 +5,10 @@ option java_outer_classname = "BugMessageProto";
 
 message BugMessage {
     oneof  message_type{
-    Bug bug=1;
-    State state=2;
-    CallOut callout=3;
-    Potion potion=4;
+    BugPro bug=1;
+    StatePro state=2;
+    CallOutPro callout=3;
+    PotionPro potion=4;
 }
 enum BugType {
         NORMAL = 0;
@@ -16,7 +16,7 @@ enum BugType {
         LOCUST = 2;
         LADYBUG = 3;
     }
-message Bug {
+message BugPro {
     required BugType type = 1;
 
     optional int32 level = 2 [default = 0];
@@ -29,18 +29,18 @@ message Bug {
         LOSE = 4;
         QUIT = 5;
     }
-message State {
+message StatePro {
     required StateType type = 1;
 }
 
-message CallOut {
+message CallOutPro {
     required string word = 1;
 }
 enum PotionType {
         PARALYZE = 0;
         BUG_RAIN = 1;
     }
-message Potion {
+message PotionPro {
     required PotionType type = 1;
 
 }

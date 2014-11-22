@@ -13,56 +13,56 @@ public final class BugMessageProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
     boolean hasBug();
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
-    BugMessage.Bug getBug();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro getBug();
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
-    BugMessage.BugOrBuilder getBugOrBuilder();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder getBugOrBuilder();
 
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
     boolean hasState();
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
-    BugMessage.State getState();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro getState();
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
-    BugMessage.StateOrBuilder getStateOrBuilder();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder getStateOrBuilder();
 
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
     boolean hasCallout();
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
-    BugMessage.CallOut getCallout();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro getCallout();
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
-    BugMessage.CallOutOrBuilder getCalloutOrBuilder();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder getCalloutOrBuilder();
 
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
     boolean hasPotion();
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
-    BugMessage.Potion getPotion();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro getPotion();
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
-    BugMessage.PotionOrBuilder getPotionOrBuilder();
+    yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder getPotionOrBuilder();
   }
   /**
    * Protobuf type {@code util.BugMessage}
@@ -88,7 +88,7 @@ public final class BugMessageProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -117,52 +117,52 @@ public final class BugMessageProto {
               break;
             }
             case 10: {
-              Bug.Builder subBuilder = null;
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder subBuilder = null;
               if (messageTypeCase_ == 1) {
-                subBuilder = ((Bug) messageType_).toBuilder();
+                subBuilder = ((yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_).toBuilder();
               }
-              messageType_ = input.readMessage(Bug.PARSER, extensionRegistry);
+              messageType_ = input.readMessage(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Bug) messageType_);
+                subBuilder.mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_);
                 messageType_ = subBuilder.buildPartial();
               }
               messageTypeCase_ = 1;
               break;
             }
             case 18: {
-              State.Builder subBuilder = null;
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder subBuilder = null;
               if (messageTypeCase_ == 2) {
-                subBuilder = ((State) messageType_).toBuilder();
+                subBuilder = ((yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_).toBuilder();
               }
-              messageType_ = input.readMessage(State.PARSER, extensionRegistry);
+              messageType_ = input.readMessage(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((State) messageType_);
+                subBuilder.mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_);
                 messageType_ = subBuilder.buildPartial();
               }
               messageTypeCase_ = 2;
               break;
             }
             case 26: {
-              CallOut.Builder subBuilder = null;
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder subBuilder = null;
               if (messageTypeCase_ == 3) {
-                subBuilder = ((CallOut) messageType_).toBuilder();
+                subBuilder = ((yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_).toBuilder();
               }
-              messageType_ = input.readMessage(CallOut.PARSER, extensionRegistry);
+              messageType_ = input.readMessage(yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((CallOut) messageType_);
+                subBuilder.mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_);
                 messageType_ = subBuilder.buildPartial();
               }
               messageTypeCase_ = 3;
               break;
             }
             case 34: {
-              Potion.Builder subBuilder = null;
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder subBuilder = null;
               if (messageTypeCase_ == 4) {
-                subBuilder = ((Potion) messageType_).toBuilder();
+                subBuilder = ((yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_).toBuilder();
               }
-              messageType_ = input.readMessage(Potion.PARSER, extensionRegistry);
+              messageType_ = input.readMessage(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Potion) messageType_);
+                subBuilder.mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_);
                 messageType_ = subBuilder.buildPartial();
               }
               messageTypeCase_ = 4;
@@ -182,14 +182,14 @@ public final class BugMessageProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return BugMessageProto.internal_static_util_BugMessage_descriptor;
+      return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return BugMessageProto.internal_static_util_BugMessage_fieldAccessorTable
+      return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              BugMessage.class, Builder.class);
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.Builder.class);
     }
 
     public static com.google.protobuf.Parser<BugMessage> PARSER =
@@ -202,7 +202,7 @@ public final class BugMessageProto {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<BugMessage> getParserForType() {
       return PARSER;
     }
@@ -282,7 +282,7 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return BugMessage.getDescriptor().getEnumTypes().get(0);
+        return yiou.chen.bugfight.util.BugMessageProto.BugMessage.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final BugType[] VALUES = values();
@@ -290,7 +290,7 @@ public final class BugMessageProto {
       public static BugType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         return VALUES[desc.getIndex()];
@@ -400,7 +400,7 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return BugMessage.getDescriptor().getEnumTypes().get(1);
+        return yiou.chen.bugfight.util.BugMessageProto.BugMessage.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final StateType[] VALUES = values();
@@ -408,7 +408,7 @@ public final class BugMessageProto {
       public static StateType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         return VALUES[desc.getIndex()];
@@ -482,7 +482,7 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return BugMessage.getDescriptor().getEnumTypes().get(2);
+        return yiou.chen.bugfight.util.BugMessageProto.BugMessage.getDescriptor().getEnumTypes().get(2);
       }
 
       private static final PotionType[] VALUES = values();
@@ -490,7 +490,7 @@ public final class BugMessageProto {
       public static PotionType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         return VALUES[desc.getIndex()];
@@ -507,8 +507,8 @@ public final class BugMessageProto {
       // @@protoc_insertion_point(enum_scope:util.BugMessage.PotionType)
     }
 
-    public interface BugOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:util.BugMessage.Bug)
+    public interface BugProOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:util.BugMessage.BugPro)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -518,7 +518,7 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.BugType type = 1;</code>
        */
-      BugType getType();
+      yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType getType();
 
       /**
        * <code>optional int32 level = 2 [default = 0];</code>
@@ -530,35 +530,35 @@ public final class BugMessageProto {
       int getLevel();
     }
     /**
-     * Protobuf type {@code util.BugMessage.Bug}
+     * Protobuf type {@code util.BugMessage.BugPro}
      */
-    public static final class Bug extends
+    public static final class BugPro extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:util.BugMessage.Bug)
-        BugOrBuilder {
-      // Use Bug.newBuilder() to construct.
-      private Bug(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        // @@protoc_insertion_point(message_implements:util.BugMessage.BugPro)
+        BugProOrBuilder {
+      // Use BugPro.newBuilder() to construct.
+      private BugPro(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private Bug(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private BugPro(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-      private static final Bug defaultInstance;
-      public static Bug getDefaultInstance() {
+      private static final BugPro defaultInstance;
+      public static BugPro getDefaultInstance() {
         return defaultInstance;
       }
 
-      public Bug getDefaultInstanceForType() {
+      public BugPro getDefaultInstanceForType() {
         return defaultInstance;
       }
 
       private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @Override
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
-      private Bug(
+      private BugPro(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -583,7 +583,7 @@ public final class BugMessageProto {
               }
               case 8: {
                 int rawValue = input.readEnum();
-                BugType value = BugType.valueOf(rawValue);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType value = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
@@ -611,34 +611,34 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return BugMessageProto.internal_static_util_BugMessage_Bug_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_BugPro_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return BugMessageProto.internal_static_util_BugMessage_Bug_fieldAccessorTable
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_BugPro_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Bug.class, Builder.class);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Bug> PARSER =
-          new com.google.protobuf.AbstractParser<Bug>() {
-        public Bug parsePartialFrom(
+      public static com.google.protobuf.Parser<BugPro> PARSER =
+          new com.google.protobuf.AbstractParser<BugPro>() {
+        public BugPro parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Bug(input, extensionRegistry);
+          return new BugPro(input, extensionRegistry);
         }
       };
 
-      @Override
-      public com.google.protobuf.Parser<Bug> getParserForType() {
+      @java.lang.Override
+      public com.google.protobuf.Parser<BugPro> getParserForType() {
         return PARSER;
       }
 
       private int bitField0_;
       public static final int TYPE_FIELD_NUMBER = 1;
-      private BugType type_;
+      private yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType type_;
       /**
        * <code>required .util.BugMessage.BugType type = 1;</code>
        */
@@ -648,7 +648,7 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.BugType type = 1;</code>
        */
-      public BugType getType() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType getType() {
         return type_;
       }
 
@@ -668,7 +668,7 @@ public final class BugMessageProto {
       }
 
       private void initFields() {
-        type_ = BugType.NORMAL;
+        type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType.NORMAL;
         level_ = 0;
       }
       private byte memoizedIsInitialized = -1;
@@ -717,59 +717,59 @@ public final class BugMessageProto {
       }
 
       private static final long serialVersionUID = 0L;
-      @Override
-      protected Object writeReplace()
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
           throws java.io.ObjectStreamException {
         return super.writeReplace();
       }
 
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Bug parseFrom(byte[] data)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Bug parseFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static Bug parseDelimitedFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static Bug parseDelimitedFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static Bug parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -778,37 +778,37 @@ public final class BugMessageProto {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(Bug prototype) {
+      public static Builder newBuilder(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
 
-      @Override
+      @java.lang.Override
       protected Builder newBuilderForType(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
       /**
-       * Protobuf type {@code util.BugMessage.Bug}
+       * Protobuf type {@code util.BugMessage.BugPro}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:util.BugMessage.Bug)
-          BugOrBuilder {
+          // @@protoc_insertion_point(builder_implements:util.BugMessage.BugPro)
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return BugMessageProto.internal_static_util_BugMessage_Bug_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_BugPro_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return BugMessageProto.internal_static_util_BugMessage_Bug_fieldAccessorTable
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_BugPro_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Bug.class, Builder.class);
+                  yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder.class);
         }
 
-        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.Bug.newBuilder()
+        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -828,7 +828,7 @@ public final class BugMessageProto {
 
         public Builder clear() {
           super.clear();
-          type_ = BugType.NORMAL;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType.NORMAL;
           bitField0_ = (bitField0_ & ~0x00000001);
           level_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -841,23 +841,23 @@ public final class BugMessageProto {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return BugMessageProto.internal_static_util_BugMessage_Bug_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_BugPro_descriptor;
         }
 
-        public Bug getDefaultInstanceForType() {
-          return Bug.getDefaultInstance();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro getDefaultInstanceForType() {
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
         }
 
-        public Bug build() {
-          Bug result = buildPartial();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro build() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public Bug buildPartial() {
-          Bug result = new Bug(this);
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro buildPartial() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro result = new yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -874,16 +874,16 @@ public final class BugMessageProto {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof Bug) {
-            return mergeFrom((Bug)other);
+          if (other instanceof yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) {
+            return mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(Bug other) {
-          if (other == Bug.getDefaultInstance()) return this;
+        public Builder mergeFrom(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro other) {
+          if (other == yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance()) return this;
           if (other.hasType()) {
             setType(other.getType());
           }
@@ -906,11 +906,11 @@ public final class BugMessageProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          Bug parsedMessage = null;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (Bug) e.getUnfinishedMessage();
+            parsedMessage = (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -921,7 +921,7 @@ public final class BugMessageProto {
         }
         private int bitField0_;
 
-        private BugType type_ = BugType.NORMAL;
+        private yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType.NORMAL;
         /**
          * <code>required .util.BugMessage.BugType type = 1;</code>
          */
@@ -931,13 +931,13 @@ public final class BugMessageProto {
         /**
          * <code>required .util.BugMessage.BugType type = 1;</code>
          */
-        public BugType getType() {
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType getType() {
           return type_;
         }
         /**
          * <code>required .util.BugMessage.BugType type = 1;</code>
          */
-        public Builder setType(BugType value) {
+        public Builder setType(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -951,7 +951,7 @@ public final class BugMessageProto {
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = BugType.NORMAL;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugType.NORMAL;
           onChanged();
           return this;
         }
@@ -988,19 +988,19 @@ public final class BugMessageProto {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:util.BugMessage.Bug)
+        // @@protoc_insertion_point(builder_scope:util.BugMessage.BugPro)
       }
 
       static {
-        defaultInstance = new Bug(true);
+        defaultInstance = new BugPro(true);
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:util.BugMessage.Bug)
+      // @@protoc_insertion_point(class_scope:util.BugMessage.BugPro)
     }
 
-    public interface StateOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:util.BugMessage.State)
+    public interface StateProOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:util.BugMessage.StatePro)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -1010,38 +1010,38 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.StateType type = 1;</code>
        */
-      StateType getType();
+      yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType getType();
     }
     /**
-     * Protobuf type {@code util.BugMessage.State}
+     * Protobuf type {@code util.BugMessage.StatePro}
      */
-    public static final class State extends
+    public static final class StatePro extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:util.BugMessage.State)
-        StateOrBuilder {
-      // Use State.newBuilder() to construct.
-      private State(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        // @@protoc_insertion_point(message_implements:util.BugMessage.StatePro)
+        StateProOrBuilder {
+      // Use StatePro.newBuilder() to construct.
+      private StatePro(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private State(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private StatePro(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-      private static final State defaultInstance;
-      public static State getDefaultInstance() {
+      private static final StatePro defaultInstance;
+      public static StatePro getDefaultInstance() {
         return defaultInstance;
       }
 
-      public State getDefaultInstanceForType() {
+      public StatePro getDefaultInstanceForType() {
         return defaultInstance;
       }
 
       private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @Override
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
-      private State(
+      private StatePro(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1066,7 +1066,7 @@ public final class BugMessageProto {
               }
               case 8: {
                 int rawValue = input.readEnum();
-                StateType value = StateType.valueOf(rawValue);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType value = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
@@ -1089,34 +1089,34 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return BugMessageProto.internal_static_util_BugMessage_State_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_StatePro_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return BugMessageProto.internal_static_util_BugMessage_State_fieldAccessorTable
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_StatePro_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                State.class, Builder.class);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<State> PARSER =
-          new com.google.protobuf.AbstractParser<State>() {
-        public State parsePartialFrom(
+      public static com.google.protobuf.Parser<StatePro> PARSER =
+          new com.google.protobuf.AbstractParser<StatePro>() {
+        public StatePro parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new State(input, extensionRegistry);
+          return new StatePro(input, extensionRegistry);
         }
       };
 
-      @Override
-      public com.google.protobuf.Parser<State> getParserForType() {
+      @java.lang.Override
+      public com.google.protobuf.Parser<StatePro> getParserForType() {
         return PARSER;
       }
 
       private int bitField0_;
       public static final int TYPE_FIELD_NUMBER = 1;
-      private StateType type_;
+      private yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType type_;
       /**
        * <code>required .util.BugMessage.StateType type = 1;</code>
        */
@@ -1126,12 +1126,12 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.StateType type = 1;</code>
        */
-      public StateType getType() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType getType() {
         return type_;
       }
 
       private void initFields() {
-        type_ = StateType.READY;
+        type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType.READY;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -1172,59 +1172,59 @@ public final class BugMessageProto {
       }
 
       private static final long serialVersionUID = 0L;
-      @Override
-      protected Object writeReplace()
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
           throws java.io.ObjectStreamException {
         return super.writeReplace();
       }
 
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static State parseFrom(byte[] data)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static State parseFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static State parseDelimitedFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static State parseDelimitedFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static State parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1233,37 +1233,37 @@ public final class BugMessageProto {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(State prototype) {
+      public static Builder newBuilder(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
 
-      @Override
+      @java.lang.Override
       protected Builder newBuilderForType(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
       /**
-       * Protobuf type {@code util.BugMessage.State}
+       * Protobuf type {@code util.BugMessage.StatePro}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:util.BugMessage.State)
-          StateOrBuilder {
+          // @@protoc_insertion_point(builder_implements:util.BugMessage.StatePro)
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return BugMessageProto.internal_static_util_BugMessage_State_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_StatePro_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return BugMessageProto.internal_static_util_BugMessage_State_fieldAccessorTable
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_StatePro_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  State.class, Builder.class);
+                  yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder.class);
         }
 
-        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.State.newBuilder()
+        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1283,7 +1283,7 @@ public final class BugMessageProto {
 
         public Builder clear() {
           super.clear();
-          type_ = StateType.READY;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType.READY;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
@@ -1294,23 +1294,23 @@ public final class BugMessageProto {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return BugMessageProto.internal_static_util_BugMessage_State_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_StatePro_descriptor;
         }
 
-        public State getDefaultInstanceForType() {
-          return State.getDefaultInstance();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro getDefaultInstanceForType() {
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
         }
 
-        public State build() {
-          State result = buildPartial();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro build() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public State buildPartial() {
-          State result = new State(this);
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro buildPartial() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro result = new yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1323,16 +1323,16 @@ public final class BugMessageProto {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof State) {
-            return mergeFrom((State)other);
+          if (other instanceof yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) {
+            return mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(State other) {
-          if (other == State.getDefaultInstance()) return this;
+        public Builder mergeFrom(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro other) {
+          if (other == yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance()) return this;
           if (other.hasType()) {
             setType(other.getType());
           }
@@ -1352,11 +1352,11 @@ public final class BugMessageProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          State parsedMessage = null;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (State) e.getUnfinishedMessage();
+            parsedMessage = (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -1367,7 +1367,7 @@ public final class BugMessageProto {
         }
         private int bitField0_;
 
-        private StateType type_ = StateType.READY;
+        private yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType.READY;
         /**
          * <code>required .util.BugMessage.StateType type = 1;</code>
          */
@@ -1377,13 +1377,13 @@ public final class BugMessageProto {
         /**
          * <code>required .util.BugMessage.StateType type = 1;</code>
          */
-        public StateType getType() {
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType getType() {
           return type_;
         }
         /**
          * <code>required .util.BugMessage.StateType type = 1;</code>
          */
-        public Builder setType(StateType value) {
+        public Builder setType(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -1397,24 +1397,24 @@ public final class BugMessageProto {
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = StateType.READY;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateType.READY;
           onChanged();
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:util.BugMessage.State)
+        // @@protoc_insertion_point(builder_scope:util.BugMessage.StatePro)
       }
 
       static {
-        defaultInstance = new State(true);
+        defaultInstance = new StatePro(true);
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:util.BugMessage.State)
+      // @@protoc_insertion_point(class_scope:util.BugMessage.StatePro)
     }
 
-    public interface CallOutOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:util.BugMessage.CallOut)
+    public interface CallOutProOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:util.BugMessage.CallOutPro)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -1424,7 +1424,7 @@ public final class BugMessageProto {
       /**
        * <code>required string word = 1;</code>
        */
-      String getWord();
+      java.lang.String getWord();
       /**
        * <code>required string word = 1;</code>
        */
@@ -1432,35 +1432,35 @@ public final class BugMessageProto {
           getWordBytes();
     }
     /**
-     * Protobuf type {@code util.BugMessage.CallOut}
+     * Protobuf type {@code util.BugMessage.CallOutPro}
      */
-    public static final class CallOut extends
+    public static final class CallOutPro extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:util.BugMessage.CallOut)
-        CallOutOrBuilder {
-      // Use CallOut.newBuilder() to construct.
-      private CallOut(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        // @@protoc_insertion_point(message_implements:util.BugMessage.CallOutPro)
+        CallOutProOrBuilder {
+      // Use CallOutPro.newBuilder() to construct.
+      private CallOutPro(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CallOut(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CallOutPro(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-      private static final CallOut defaultInstance;
-      public static CallOut getDefaultInstance() {
+      private static final CallOutPro defaultInstance;
+      public static CallOutPro getDefaultInstance() {
         return defaultInstance;
       }
 
-      public CallOut getDefaultInstanceForType() {
+      public CallOutPro getDefaultInstanceForType() {
         return defaultInstance;
       }
 
       private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @Override
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
-      private CallOut(
+      private CallOutPro(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1503,34 +1503,34 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return BugMessageProto.internal_static_util_BugMessage_CallOut_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_CallOutPro_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return BugMessageProto.internal_static_util_BugMessage_CallOut_fieldAccessorTable
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_CallOutPro_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CallOut.class, Builder.class);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CallOut> PARSER =
-          new com.google.protobuf.AbstractParser<CallOut>() {
-        public CallOut parsePartialFrom(
+      public static com.google.protobuf.Parser<CallOutPro> PARSER =
+          new com.google.protobuf.AbstractParser<CallOutPro>() {
+        public CallOutPro parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CallOut(input, extensionRegistry);
+          return new CallOutPro(input, extensionRegistry);
         }
       };
 
-      @Override
-      public com.google.protobuf.Parser<CallOut> getParserForType() {
+      @java.lang.Override
+      public com.google.protobuf.Parser<CallOutPro> getParserForType() {
         return PARSER;
       }
 
       private int bitField0_;
       public static final int WORD_FIELD_NUMBER = 1;
-      private Object word_;
+      private java.lang.Object word_;
       /**
        * <code>required string word = 1;</code>
        */
@@ -1540,14 +1540,14 @@ public final class BugMessageProto {
       /**
        * <code>required string word = 1;</code>
        */
-      public String getWord() {
-        Object ref = word_;
-        if (ref instanceof String) {
-          return (String) ref;
+      public java.lang.String getWord() {
+        java.lang.Object ref = word_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
         } else {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             word_ = s;
           }
@@ -1559,11 +1559,11 @@ public final class BugMessageProto {
        */
       public com.google.protobuf.ByteString
           getWordBytes() {
-        Object ref = word_;
-        if (ref instanceof String) {
+        java.lang.Object ref = word_;
+        if (ref instanceof java.lang.String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           word_ = b;
           return b;
         } else {
@@ -1613,59 +1613,59 @@ public final class BugMessageProto {
       }
 
       private static final long serialVersionUID = 0L;
-      @Override
-      protected Object writeReplace()
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
           throws java.io.ObjectStreamException {
         return super.writeReplace();
       }
 
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static CallOut parseFrom(byte[] data)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static CallOut parseFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static CallOut parseDelimitedFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static CallOut parseDelimitedFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static CallOut parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1674,37 +1674,37 @@ public final class BugMessageProto {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(CallOut prototype) {
+      public static Builder newBuilder(yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
 
-      @Override
+      @java.lang.Override
       protected Builder newBuilderForType(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
       /**
-       * Protobuf type {@code util.BugMessage.CallOut}
+       * Protobuf type {@code util.BugMessage.CallOutPro}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:util.BugMessage.CallOut)
-          CallOutOrBuilder {
+          // @@protoc_insertion_point(builder_implements:util.BugMessage.CallOutPro)
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return BugMessageProto.internal_static_util_BugMessage_CallOut_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_CallOutPro_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return BugMessageProto.internal_static_util_BugMessage_CallOut_fieldAccessorTable
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_CallOutPro_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  CallOut.class, Builder.class);
+                  yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder.class);
         }
 
-        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOut.newBuilder()
+        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1735,23 +1735,23 @@ public final class BugMessageProto {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return BugMessageProto.internal_static_util_BugMessage_CallOut_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_CallOutPro_descriptor;
         }
 
-        public CallOut getDefaultInstanceForType() {
-          return CallOut.getDefaultInstance();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro getDefaultInstanceForType() {
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
         }
 
-        public CallOut build() {
-          CallOut result = buildPartial();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro build() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public CallOut buildPartial() {
-          CallOut result = new CallOut(this);
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro buildPartial() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro result = new yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1764,16 +1764,16 @@ public final class BugMessageProto {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof CallOut) {
-            return mergeFrom((CallOut)other);
+          if (other instanceof yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) {
+            return mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(CallOut other) {
-          if (other == CallOut.getDefaultInstance()) return this;
+        public Builder mergeFrom(yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro other) {
+          if (other == yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance()) return this;
           if (other.hasWord()) {
             bitField0_ |= 0x00000001;
             word_ = other.word_;
@@ -1795,11 +1795,11 @@ public final class BugMessageProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          CallOut parsedMessage = null;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (CallOut) e.getUnfinishedMessage();
+            parsedMessage = (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -1810,7 +1810,7 @@ public final class BugMessageProto {
         }
         private int bitField0_;
 
-        private Object word_ = "";
+        private java.lang.Object word_ = "";
         /**
          * <code>required string word = 1;</code>
          */
@@ -1820,18 +1820,18 @@ public final class BugMessageProto {
         /**
          * <code>required string word = 1;</code>
          */
-        public String getWord() {
-          Object ref = word_;
-          if (!(ref instanceof String)) {
+        public java.lang.String getWord() {
+          java.lang.Object ref = word_;
+          if (!(ref instanceof java.lang.String)) {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-            String s = bs.toStringUtf8();
+            java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               word_ = s;
             }
             return s;
           } else {
-            return (String) ref;
+            return (java.lang.String) ref;
           }
         }
         /**
@@ -1839,11 +1839,11 @@ public final class BugMessageProto {
          */
         public com.google.protobuf.ByteString
             getWordBytes() {
-          Object ref = word_;
+          java.lang.Object ref = word_;
           if (ref instanceof String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
-                    (String) ref);
+                    (java.lang.String) ref);
             word_ = b;
             return b;
           } else {
@@ -1854,7 +1854,7 @@ public final class BugMessageProto {
          * <code>required string word = 1;</code>
          */
         public Builder setWord(
-            String value) {
+            java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -1886,19 +1886,19 @@ public final class BugMessageProto {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:util.BugMessage.CallOut)
+        // @@protoc_insertion_point(builder_scope:util.BugMessage.CallOutPro)
       }
 
       static {
-        defaultInstance = new CallOut(true);
+        defaultInstance = new CallOutPro(true);
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:util.BugMessage.CallOut)
+      // @@protoc_insertion_point(class_scope:util.BugMessage.CallOutPro)
     }
 
-    public interface PotionOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:util.BugMessage.Potion)
+    public interface PotionProOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:util.BugMessage.PotionPro)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -1908,38 +1908,38 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.PotionType type = 1;</code>
        */
-      PotionType getType();
+      yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType getType();
     }
     /**
-     * Protobuf type {@code util.BugMessage.Potion}
+     * Protobuf type {@code util.BugMessage.PotionPro}
      */
-    public static final class Potion extends
+    public static final class PotionPro extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:util.BugMessage.Potion)
-        PotionOrBuilder {
-      // Use Potion.newBuilder() to construct.
-      private Potion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        // @@protoc_insertion_point(message_implements:util.BugMessage.PotionPro)
+        PotionProOrBuilder {
+      // Use PotionPro.newBuilder() to construct.
+      private PotionPro(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private Potion(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private PotionPro(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-      private static final Potion defaultInstance;
-      public static Potion getDefaultInstance() {
+      private static final PotionPro defaultInstance;
+      public static PotionPro getDefaultInstance() {
         return defaultInstance;
       }
 
-      public Potion getDefaultInstanceForType() {
+      public PotionPro getDefaultInstanceForType() {
         return defaultInstance;
       }
 
       private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @Override
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
-      private Potion(
+      private PotionPro(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1964,7 +1964,7 @@ public final class BugMessageProto {
               }
               case 8: {
                 int rawValue = input.readEnum();
-                PotionType value = PotionType.valueOf(rawValue);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType value = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
@@ -1987,34 +1987,34 @@ public final class BugMessageProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return BugMessageProto.internal_static_util_BugMessage_Potion_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_PotionPro_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return BugMessageProto.internal_static_util_BugMessage_Potion_fieldAccessorTable
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_PotionPro_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Potion.class, Builder.class);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Potion> PARSER =
-          new com.google.protobuf.AbstractParser<Potion>() {
-        public Potion parsePartialFrom(
+      public static com.google.protobuf.Parser<PotionPro> PARSER =
+          new com.google.protobuf.AbstractParser<PotionPro>() {
+        public PotionPro parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Potion(input, extensionRegistry);
+          return new PotionPro(input, extensionRegistry);
         }
       };
 
-      @Override
-      public com.google.protobuf.Parser<Potion> getParserForType() {
+      @java.lang.Override
+      public com.google.protobuf.Parser<PotionPro> getParserForType() {
         return PARSER;
       }
 
       private int bitField0_;
       public static final int TYPE_FIELD_NUMBER = 1;
-      private PotionType type_;
+      private yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType type_;
       /**
        * <code>required .util.BugMessage.PotionType type = 1;</code>
        */
@@ -2024,12 +2024,12 @@ public final class BugMessageProto {
       /**
        * <code>required .util.BugMessage.PotionType type = 1;</code>
        */
-      public PotionType getType() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType getType() {
         return type_;
       }
 
       private void initFields() {
-        type_ = PotionType.PARALYZE;
+        type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType.PARALYZE;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -2070,59 +2070,59 @@ public final class BugMessageProto {
       }
 
       private static final long serialVersionUID = 0L;
-      @Override
-      protected Object writeReplace()
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
           throws java.io.ObjectStreamException {
         return super.writeReplace();
       }
 
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Potion parseFrom(byte[] data)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Potion parseFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
-      public static Potion parseDelimitedFrom(java.io.InputStream input)
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input);
       }
-      public static Potion parseDelimitedFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
-      public static Potion parseFrom(
+      public static yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -2131,37 +2131,37 @@ public final class BugMessageProto {
 
       public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(Potion prototype) {
+      public static Builder newBuilder(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro prototype) {
         return newBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() { return newBuilder(this); }
 
-      @Override
+      @java.lang.Override
       protected Builder newBuilderForType(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
       /**
-       * Protobuf type {@code util.BugMessage.Potion}
+       * Protobuf type {@code util.BugMessage.PotionPro}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:util.BugMessage.Potion)
-          PotionOrBuilder {
+          // @@protoc_insertion_point(builder_implements:util.BugMessage.PotionPro)
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return BugMessageProto.internal_static_util_BugMessage_Potion_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_PotionPro_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return BugMessageProto.internal_static_util_BugMessage_Potion_fieldAccessorTable
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_PotionPro_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Potion.class, Builder.class);
+                  yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder.class);
         }
 
-        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.Potion.newBuilder()
+        // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -2181,7 +2181,7 @@ public final class BugMessageProto {
 
         public Builder clear() {
           super.clear();
-          type_ = PotionType.PARALYZE;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType.PARALYZE;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
@@ -2192,23 +2192,23 @@ public final class BugMessageProto {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return BugMessageProto.internal_static_util_BugMessage_Potion_descriptor;
+          return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_PotionPro_descriptor;
         }
 
-        public Potion getDefaultInstanceForType() {
-          return Potion.getDefaultInstance();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro getDefaultInstanceForType() {
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
         }
 
-        public Potion build() {
-          Potion result = buildPartial();
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro build() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public Potion buildPartial() {
-          Potion result = new Potion(this);
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro buildPartial() {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro result = new yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2221,16 +2221,16 @@ public final class BugMessageProto {
         }
 
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof Potion) {
-            return mergeFrom((Potion)other);
+          if (other instanceof yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) {
+            return mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(Potion other) {
-          if (other == Potion.getDefaultInstance()) return this;
+        public Builder mergeFrom(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro other) {
+          if (other == yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance()) return this;
           if (other.hasType()) {
             setType(other.getType());
           }
@@ -2250,11 +2250,11 @@ public final class BugMessageProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          Potion parsedMessage = null;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (Potion) e.getUnfinishedMessage();
+            parsedMessage = (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) e.getUnfinishedMessage();
             throw e;
           } finally {
             if (parsedMessage != null) {
@@ -2265,7 +2265,7 @@ public final class BugMessageProto {
         }
         private int bitField0_;
 
-        private PotionType type_ = PotionType.PARALYZE;
+        private yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType.PARALYZE;
         /**
          * <code>required .util.BugMessage.PotionType type = 1;</code>
          */
@@ -2275,13 +2275,13 @@ public final class BugMessageProto {
         /**
          * <code>required .util.BugMessage.PotionType type = 1;</code>
          */
-        public PotionType getType() {
+        public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType getType() {
           return type_;
         }
         /**
          * <code>required .util.BugMessage.PotionType type = 1;</code>
          */
-        public Builder setType(PotionType value) {
+        public Builder setType(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -2295,25 +2295,25 @@ public final class BugMessageProto {
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = PotionType.PARALYZE;
+          type_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionType.PARALYZE;
           onChanged();
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:util.BugMessage.Potion)
+        // @@protoc_insertion_point(builder_scope:util.BugMessage.PotionPro)
       }
 
       static {
-        defaultInstance = new Potion(true);
+        defaultInstance = new PotionPro(true);
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:util.BugMessage.Potion)
+      // @@protoc_insertion_point(class_scope:util.BugMessage.PotionPro)
     }
 
     private int bitField0_;
     private int messageTypeCase_ = 0;
-    private Object messageType_;
+    private java.lang.Object messageType_;
     public enum MessageTypeCase
         implements com.google.protobuf.Internal.EnumLite {
       BUG(1),
@@ -2332,7 +2332,7 @@ public final class BugMessageProto {
           case 3: return CALLOUT;
           case 4: return POTION;
           case 0: return MESSAGETYPE_NOT_SET;
-          default: throw new IllegalArgumentException(
+          default: throw new java.lang.IllegalArgumentException(
             "Value is undefined for this oneof enum.");
         }
       }
@@ -2349,106 +2349,106 @@ public final class BugMessageProto {
 
     public static final int BUG_FIELD_NUMBER = 1;
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
     public boolean hasBug() {
       return messageTypeCase_ == 1;
     }
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
-    public Bug getBug() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro getBug() {
       if (messageTypeCase_ == 1) {
-         return (Bug) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_;
       }
-      return Bug.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
     }
     /**
-     * <code>optional .util.BugMessage.Bug bug = 1;</code>
+     * <code>optional .util.BugMessage.BugPro bug = 1;</code>
      */
-    public BugOrBuilder getBugOrBuilder() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder getBugOrBuilder() {
       if (messageTypeCase_ == 1) {
-         return (Bug) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_;
       }
-      return Bug.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
     }
 
     public static final int STATE_FIELD_NUMBER = 2;
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
     public boolean hasState() {
       return messageTypeCase_ == 2;
     }
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
-    public State getState() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro getState() {
       if (messageTypeCase_ == 2) {
-         return (State) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_;
       }
-      return State.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
     }
     /**
-     * <code>optional .util.BugMessage.State state = 2;</code>
+     * <code>optional .util.BugMessage.StatePro state = 2;</code>
      */
-    public StateOrBuilder getStateOrBuilder() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder getStateOrBuilder() {
       if (messageTypeCase_ == 2) {
-         return (State) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_;
       }
-      return State.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
     }
 
     public static final int CALLOUT_FIELD_NUMBER = 3;
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
     public boolean hasCallout() {
       return messageTypeCase_ == 3;
     }
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
-    public CallOut getCallout() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro getCallout() {
       if (messageTypeCase_ == 3) {
-         return (CallOut) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_;
       }
-      return CallOut.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
     }
     /**
-     * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+     * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
      */
-    public CallOutOrBuilder getCalloutOrBuilder() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder getCalloutOrBuilder() {
       if (messageTypeCase_ == 3) {
-         return (CallOut) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_;
       }
-      return CallOut.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
     }
 
     public static final int POTION_FIELD_NUMBER = 4;
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
     public boolean hasPotion() {
       return messageTypeCase_ == 4;
     }
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
-    public Potion getPotion() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro getPotion() {
       if (messageTypeCase_ == 4) {
-         return (Potion) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_;
       }
-      return Potion.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
     }
     /**
-     * <code>optional .util.BugMessage.Potion potion = 4;</code>
+     * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
      */
-    public PotionOrBuilder getPotionOrBuilder() {
+    public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder getPotionOrBuilder() {
       if (messageTypeCase_ == 4) {
-         return (Potion) messageType_;
+         return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_;
       }
-      return Potion.getDefaultInstance();
+      return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
     }
 
     private void initFields() {
@@ -2491,16 +2491,16 @@ public final class BugMessageProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (messageTypeCase_ == 1) {
-        output.writeMessage(1, (Bug) messageType_);
+        output.writeMessage(1, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_);
       }
       if (messageTypeCase_ == 2) {
-        output.writeMessage(2, (State) messageType_);
+        output.writeMessage(2, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_);
       }
       if (messageTypeCase_ == 3) {
-        output.writeMessage(3, (CallOut) messageType_);
+        output.writeMessage(3, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_);
       }
       if (messageTypeCase_ == 4) {
-        output.writeMessage(4, (Potion) messageType_);
+        output.writeMessage(4, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2513,19 +2513,19 @@ public final class BugMessageProto {
       size = 0;
       if (messageTypeCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (Bug) messageType_);
+          .computeMessageSize(1, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_);
       }
       if (messageTypeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (State) messageType_);
+          .computeMessageSize(2, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_);
       }
       if (messageTypeCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (CallOut) messageType_);
+          .computeMessageSize(3, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_);
       }
       if (messageTypeCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (Potion) messageType_);
+          .computeMessageSize(4, (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2533,59 +2533,59 @@ public final class BugMessageProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static BugMessage parseFrom(byte[] data)
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static BugMessage parseFrom(java.io.InputStream input)
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static BugMessage parseDelimitedFrom(java.io.InputStream input)
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static BugMessage parseDelimitedFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static BugMessage parseFrom(
+    public static yiou.chen.bugfight.util.BugMessageProto.BugMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2594,12 +2594,12 @@ public final class BugMessageProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(BugMessage prototype) {
+    public static Builder newBuilder(yiou.chen.bugfight.util.BugMessageProto.BugMessage prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -2611,17 +2611,17 @@ public final class BugMessageProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:util.BugMessage)
-        BugMessageOrBuilder {
+        yiou.chen.bugfight.util.BugMessageProto.BugMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return BugMessageProto.internal_static_util_BugMessage_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return BugMessageProto.internal_static_util_BugMessage_fieldAccessorTable
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                BugMessage.class, Builder.class);
+                yiou.chen.bugfight.util.BugMessageProto.BugMessage.class, yiou.chen.bugfight.util.BugMessageProto.BugMessage.Builder.class);
       }
 
       // Construct using yiou.chen.bugfight.util.BugMessageProto.BugMessage.newBuilder()
@@ -2655,23 +2655,23 @@ public final class BugMessageProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return BugMessageProto.internal_static_util_BugMessage_descriptor;
+        return yiou.chen.bugfight.util.BugMessageProto.internal_static_util_BugMessage_descriptor;
       }
 
-      public BugMessage getDefaultInstanceForType() {
-        return BugMessage.getDefaultInstance();
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage getDefaultInstanceForType() {
+        return yiou.chen.bugfight.util.BugMessageProto.BugMessage.getDefaultInstance();
       }
 
-      public BugMessage build() {
-        BugMessage result = buildPartial();
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage build() {
+        yiou.chen.bugfight.util.BugMessageProto.BugMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public BugMessage buildPartial() {
-        BugMessage result = new BugMessage(this);
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage buildPartial() {
+        yiou.chen.bugfight.util.BugMessageProto.BugMessage result = new yiou.chen.bugfight.util.BugMessageProto.BugMessage(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (messageTypeCase_ == 1) {
@@ -2709,16 +2709,16 @@ public final class BugMessageProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof BugMessage) {
-          return mergeFrom((BugMessage)other);
+        if (other instanceof yiou.chen.bugfight.util.BugMessageProto.BugMessage) {
+          return mergeFrom((yiou.chen.bugfight.util.BugMessageProto.BugMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(BugMessage other) {
-        if (other == BugMessage.getDefaultInstance()) return this;
+      public Builder mergeFrom(yiou.chen.bugfight.util.BugMessageProto.BugMessage other) {
+        if (other == yiou.chen.bugfight.util.BugMessageProto.BugMessage.getDefaultInstance()) return this;
         switch (other.getMessageTypeCase()) {
           case BUG: {
             mergeBug(other.getBug());
@@ -2776,11 +2776,11 @@ public final class BugMessageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        BugMessage parsedMessage = null;
+        yiou.chen.bugfight.util.BugMessageProto.BugMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (BugMessage) e.getUnfinishedMessage();
+          parsedMessage = (yiou.chen.bugfight.util.BugMessageProto.BugMessage) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2790,7 +2790,7 @@ public final class BugMessageProto {
         return this;
       }
       private int messageTypeCase_ = 0;
-      private Object messageType_;
+      private java.lang.Object messageType_;
       public MessageTypeCase
           getMessageTypeCase() {
         return MessageTypeCase.valueOf(
@@ -2807,33 +2807,33 @@ public final class BugMessageProto {
       private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilder<
-          Bug, Bug.Builder, BugOrBuilder> bugBuilder_;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder> bugBuilder_;
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
       public boolean hasBug() {
         return messageTypeCase_ == 1;
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
-      public Bug getBug() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro getBug() {
         if (bugBuilder_ == null) {
           if (messageTypeCase_ == 1) {
-            return (Bug) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_;
           }
-          return Bug.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
         } else {
           if (messageTypeCase_ == 1) {
             return bugBuilder_.getMessage();
           }
-          return Bug.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
-      public Builder setBug(Bug value) {
+      public Builder setBug(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro value) {
         if (bugBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2847,10 +2847,10 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
       public Builder setBug(
-          Bug.Builder builderForValue) {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder builderForValue) {
         if (bugBuilder_ == null) {
           messageType_ = builderForValue.build();
           onChanged();
@@ -2861,13 +2861,13 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
-      public Builder mergeBug(Bug value) {
+      public Builder mergeBug(yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro value) {
         if (bugBuilder_ == null) {
           if (messageTypeCase_ == 1 &&
-              messageType_ != Bug.getDefaultInstance()) {
-            messageType_ = Bug.newBuilder((Bug) messageType_)
+              messageType_ != yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance()) {
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.newBuilder((yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_)
                 .mergeFrom(value).buildPartial();
           } else {
             messageType_ = value;
@@ -2883,7 +2883,7 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
       public Builder clearBug() {
         if (bugBuilder_ == null) {
@@ -2902,37 +2902,37 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
-      public Bug.Builder getBugBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder getBugBuilder() {
         return getBugFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
-      public BugOrBuilder getBugOrBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder getBugOrBuilder() {
         if ((messageTypeCase_ == 1) && (bugBuilder_ != null)) {
           return bugBuilder_.getMessageOrBuilder();
         } else {
           if (messageTypeCase_ == 1) {
-            return (Bug) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_;
           }
-          return Bug.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.Bug bug = 1;</code>
+       * <code>optional .util.BugMessage.BugPro bug = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Bug, Bug.Builder, BugOrBuilder>
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder> 
           getBugFieldBuilder() {
         if (bugBuilder_ == null) {
           if (!(messageTypeCase_ == 1)) {
-            messageType_ = Bug.getDefaultInstance();
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.getDefaultInstance();
           }
           bugBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Bug, Bug.Builder, BugOrBuilder>(
-                  (Bug) messageType_,
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugProOrBuilder>(
+                  (yiou.chen.bugfight.util.BugMessageProto.BugMessage.BugPro) messageType_,
                   getParentForChildren(),
                   isClean());
           messageType_ = null;
@@ -2942,33 +2942,33 @@ public final class BugMessageProto {
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          State, State.Builder, StateOrBuilder> stateBuilder_;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder> stateBuilder_;
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
       public boolean hasState() {
         return messageTypeCase_ == 2;
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
-      public State getState() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro getState() {
         if (stateBuilder_ == null) {
           if (messageTypeCase_ == 2) {
-            return (State) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_;
           }
-          return State.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
         } else {
           if (messageTypeCase_ == 2) {
             return stateBuilder_.getMessage();
           }
-          return State.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
-      public Builder setState(State value) {
+      public Builder setState(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro value) {
         if (stateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2982,10 +2982,10 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
       public Builder setState(
-          State.Builder builderForValue) {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder builderForValue) {
         if (stateBuilder_ == null) {
           messageType_ = builderForValue.build();
           onChanged();
@@ -2996,13 +2996,13 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
-      public Builder mergeState(State value) {
+      public Builder mergeState(yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro value) {
         if (stateBuilder_ == null) {
           if (messageTypeCase_ == 2 &&
-              messageType_ != State.getDefaultInstance()) {
-            messageType_ = State.newBuilder((State) messageType_)
+              messageType_ != yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance()) {
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.newBuilder((yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_)
                 .mergeFrom(value).buildPartial();
           } else {
             messageType_ = value;
@@ -3018,7 +3018,7 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
       public Builder clearState() {
         if (stateBuilder_ == null) {
@@ -3037,37 +3037,37 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
-      public State.Builder getStateBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder getStateBuilder() {
         return getStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
-      public StateOrBuilder getStateOrBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder getStateOrBuilder() {
         if ((messageTypeCase_ == 2) && (stateBuilder_ != null)) {
           return stateBuilder_.getMessageOrBuilder();
         } else {
           if (messageTypeCase_ == 2) {
-            return (State) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_;
           }
-          return State.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.State state = 2;</code>
+       * <code>optional .util.BugMessage.StatePro state = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          State, State.Builder, StateOrBuilder>
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder> 
           getStateFieldBuilder() {
         if (stateBuilder_ == null) {
           if (!(messageTypeCase_ == 2)) {
-            messageType_ = State.getDefaultInstance();
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.getDefaultInstance();
           }
           stateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              State, State.Builder, StateOrBuilder>(
-                  (State) messageType_,
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.StateProOrBuilder>(
+                  (yiou.chen.bugfight.util.BugMessageProto.BugMessage.StatePro) messageType_,
                   getParentForChildren(),
                   isClean());
           messageType_ = null;
@@ -3077,33 +3077,33 @@ public final class BugMessageProto {
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          CallOut, CallOut.Builder, CallOutOrBuilder> calloutBuilder_;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder> calloutBuilder_;
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
       public boolean hasCallout() {
         return messageTypeCase_ == 3;
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
-      public CallOut getCallout() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro getCallout() {
         if (calloutBuilder_ == null) {
           if (messageTypeCase_ == 3) {
-            return (CallOut) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_;
           }
-          return CallOut.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
         } else {
           if (messageTypeCase_ == 3) {
             return calloutBuilder_.getMessage();
           }
-          return CallOut.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
-      public Builder setCallout(CallOut value) {
+      public Builder setCallout(yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro value) {
         if (calloutBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3117,10 +3117,10 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
       public Builder setCallout(
-          CallOut.Builder builderForValue) {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder builderForValue) {
         if (calloutBuilder_ == null) {
           messageType_ = builderForValue.build();
           onChanged();
@@ -3131,13 +3131,13 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
-      public Builder mergeCallout(CallOut value) {
+      public Builder mergeCallout(yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro value) {
         if (calloutBuilder_ == null) {
           if (messageTypeCase_ == 3 &&
-              messageType_ != CallOut.getDefaultInstance()) {
-            messageType_ = CallOut.newBuilder((CallOut) messageType_)
+              messageType_ != yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance()) {
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.newBuilder((yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_)
                 .mergeFrom(value).buildPartial();
           } else {
             messageType_ = value;
@@ -3153,7 +3153,7 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
       public Builder clearCallout() {
         if (calloutBuilder_ == null) {
@@ -3172,37 +3172,37 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
-      public CallOut.Builder getCalloutBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder getCalloutBuilder() {
         return getCalloutFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
-      public CallOutOrBuilder getCalloutOrBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder getCalloutOrBuilder() {
         if ((messageTypeCase_ == 3) && (calloutBuilder_ != null)) {
           return calloutBuilder_.getMessageOrBuilder();
         } else {
           if (messageTypeCase_ == 3) {
-            return (CallOut) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_;
           }
-          return CallOut.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.CallOut callout = 3;</code>
+       * <code>optional .util.BugMessage.CallOutPro callout = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          CallOut, CallOut.Builder, CallOutOrBuilder>
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder> 
           getCalloutFieldBuilder() {
         if (calloutBuilder_ == null) {
           if (!(messageTypeCase_ == 3)) {
-            messageType_ = CallOut.getDefaultInstance();
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.getDefaultInstance();
           }
           calloutBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              CallOut, CallOut.Builder, CallOutOrBuilder>(
-                  (CallOut) messageType_,
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutProOrBuilder>(
+                  (yiou.chen.bugfight.util.BugMessageProto.BugMessage.CallOutPro) messageType_,
                   getParentForChildren(),
                   isClean());
           messageType_ = null;
@@ -3212,33 +3212,33 @@ public final class BugMessageProto {
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          Potion, Potion.Builder, PotionOrBuilder> potionBuilder_;
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder> potionBuilder_;
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
       public boolean hasPotion() {
         return messageTypeCase_ == 4;
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
-      public Potion getPotion() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro getPotion() {
         if (potionBuilder_ == null) {
           if (messageTypeCase_ == 4) {
-            return (Potion) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_;
           }
-          return Potion.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
         } else {
           if (messageTypeCase_ == 4) {
             return potionBuilder_.getMessage();
           }
-          return Potion.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
-      public Builder setPotion(Potion value) {
+      public Builder setPotion(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro value) {
         if (potionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3252,10 +3252,10 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
       public Builder setPotion(
-          Potion.Builder builderForValue) {
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder builderForValue) {
         if (potionBuilder_ == null) {
           messageType_ = builderForValue.build();
           onChanged();
@@ -3266,13 +3266,13 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
-      public Builder mergePotion(Potion value) {
+      public Builder mergePotion(yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro value) {
         if (potionBuilder_ == null) {
           if (messageTypeCase_ == 4 &&
-              messageType_ != Potion.getDefaultInstance()) {
-            messageType_ = Potion.newBuilder((Potion) messageType_)
+              messageType_ != yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance()) {
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.newBuilder((yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_)
                 .mergeFrom(value).buildPartial();
           } else {
             messageType_ = value;
@@ -3288,7 +3288,7 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
       public Builder clearPotion() {
         if (potionBuilder_ == null) {
@@ -3307,37 +3307,37 @@ public final class BugMessageProto {
         return this;
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
-      public Potion.Builder getPotionBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder getPotionBuilder() {
         return getPotionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
-      public PotionOrBuilder getPotionOrBuilder() {
+      public yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder getPotionOrBuilder() {
         if ((messageTypeCase_ == 4) && (potionBuilder_ != null)) {
           return potionBuilder_.getMessageOrBuilder();
         } else {
           if (messageTypeCase_ == 4) {
-            return (Potion) messageType_;
+            return (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_;
           }
-          return Potion.getDefaultInstance();
+          return yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .util.BugMessage.Potion potion = 4;</code>
+       * <code>optional .util.BugMessage.PotionPro potion = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          Potion, Potion.Builder, PotionOrBuilder>
+          yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder> 
           getPotionFieldBuilder() {
         if (potionBuilder_ == null) {
           if (!(messageTypeCase_ == 4)) {
-            messageType_ = Potion.getDefaultInstance();
+            messageType_ = yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.getDefaultInstance();
           }
           potionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              Potion, Potion.Builder, PotionOrBuilder>(
-                  (Potion) messageType_,
+              yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro.Builder, yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionProOrBuilder>(
+                  (yiou.chen.bugfight.util.BugMessageProto.BugMessage.PotionPro) messageType_,
                   getParentForChildren(),
                   isClean());
           messageType_ = null;
@@ -3363,25 +3363,25 @@ public final class BugMessageProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_util_BugMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_util_BugMessage_Bug_descriptor;
+    internal_static_util_BugMessage_BugPro_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_util_BugMessage_Bug_fieldAccessorTable;
+      internal_static_util_BugMessage_BugPro_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_util_BugMessage_State_descriptor;
+    internal_static_util_BugMessage_StatePro_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_util_BugMessage_State_fieldAccessorTable;
+      internal_static_util_BugMessage_StatePro_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_util_BugMessage_CallOut_descriptor;
+    internal_static_util_BugMessage_CallOutPro_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_util_BugMessage_CallOut_fieldAccessorTable;
+      internal_static_util_BugMessage_CallOutPro_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_util_BugMessage_Potion_descriptor;
+    internal_static_util_BugMessage_PotionPro_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_util_BugMessage_Potion_fieldAccessorTable;
+      internal_static_util_BugMessage_PotionPro_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3390,23 +3390,24 @@ public final class BugMessageProto {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
-      "\n\020BugMessage.proto\022\004util\"\265\004\n\nBugMessage\022" +
-      "#\n\003bug\030\001 \001(\0132\024.util.BugMessage.BugH\000\022\'\n\005" +
-      "state\030\002 \001(\0132\026.util.BugMessage.StateH\000\022+\n" +
-      "\007callout\030\003 \001(\0132\030.util.BugMessage.CallOut" +
-      "H\000\022)\n\006potion\030\004 \001(\0132\027.util.BugMessage.Pot" +
-      "ionH\000\032?\n\003Bug\022&\n\004type\030\001 \002(\0162\030.util.BugMes" +
-      "sage.BugType\022\020\n\005level\030\002 \001(\005:\0010\0321\n\005State\022" +
-      "(\n\004type\030\001 \002(\0162\032.util.BugMessage.StateTyp" +
-      "e\032\027\n\007CallOut\022\014\n\004word\030\001 \002(\t\0323\n\006Potion\022)\n\004" +
-      "type\030\001 \002(\0162\033.util.BugMessage.PotionType\"",
-      ":\n\007BugType\022\n\n\006NORMAL\020\000\022\n\n\006BEETLE\020\001\022\n\n\006LO" +
-      "CUST\020\002\022\013\n\007LADYBUG\020\003\"I\n\tStateType\022\t\n\005READ" +
-      "Y\020\000\022\t\n\005START\020\001\022\t\n\005PAUSE\020\002\022\007\n\003WIN\020\003\022\010\n\004LO" +
-      "SE\020\004\022\010\n\004QUIT\020\005\"(\n\nPotionType\022\014\n\010PARALYZE" +
-      "\020\000\022\014\n\010BUG_RAIN\020\001B\016\n\014message_typeB*\n\027yiou" +
-      ".chen.bugfight.utilB\017BugMessageProto"
+    java.lang.String[] descriptorData = {
+      "\n\020BugMessage.proto\022\004util\"\315\004\n\nBugMessage\022" +
+      "&\n\003bug\030\001 \001(\0132\027.util.BugMessage.BugProH\000\022" +
+      "*\n\005state\030\002 \001(\0132\031.util.BugMessage.StatePr" +
+      "oH\000\022.\n\007callout\030\003 \001(\0132\033.util.BugMessage.C" +
+      "allOutProH\000\022,\n\006potion\030\004 \001(\0132\032.util.BugMe" +
+      "ssage.PotionProH\000\032B\n\006BugPro\022&\n\004type\030\001 \002(" +
+      "\0162\030.util.BugMessage.BugType\022\020\n\005level\030\002 \001" +
+      "(\005:\0010\0324\n\010StatePro\022(\n\004type\030\001 \002(\0162\032.util.B" +
+      "ugMessage.StateType\032\032\n\nCallOutPro\022\014\n\004wor" +
+      "d\030\001 \002(\t\0326\n\tPotionPro\022)\n\004type\030\001 \002(\0162\033.uti",
+      "l.BugMessage.PotionType\":\n\007BugType\022\n\n\006NO" +
+      "RMAL\020\000\022\n\n\006BEETLE\020\001\022\n\n\006LOCUST\020\002\022\013\n\007LADYBU" +
+      "G\020\003\"I\n\tStateType\022\t\n\005READY\020\000\022\t\n\005START\020\001\022\t" +
+      "\n\005PAUSE\020\002\022\007\n\003WIN\020\003\022\010\n\004LOSE\020\004\022\010\n\004QUIT\020\005\"(" +
+      "\n\nPotionType\022\014\n\010PARALYZE\020\000\022\014\n\010BUG_RAIN\020\001" +
+      "B\016\n\014message_typeB*\n\027yiou.chen.bugfight.u" +
+      "tilB\017BugMessageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3425,31 +3426,31 @@ public final class BugMessageProto {
     internal_static_util_BugMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_util_BugMessage_descriptor,
-        new String[] { "Bug", "State", "Callout", "Potion", "MessageType", });
-    internal_static_util_BugMessage_Bug_descriptor =
+        new java.lang.String[] { "Bug", "State", "Callout", "Potion", "MessageType", });
+    internal_static_util_BugMessage_BugPro_descriptor =
       internal_static_util_BugMessage_descriptor.getNestedTypes().get(0);
-    internal_static_util_BugMessage_Bug_fieldAccessorTable = new
+    internal_static_util_BugMessage_BugPro_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_util_BugMessage_Bug_descriptor,
-        new String[] { "Type", "Level", });
-    internal_static_util_BugMessage_State_descriptor =
+        internal_static_util_BugMessage_BugPro_descriptor,
+        new java.lang.String[] { "Type", "Level", });
+    internal_static_util_BugMessage_StatePro_descriptor =
       internal_static_util_BugMessage_descriptor.getNestedTypes().get(1);
-    internal_static_util_BugMessage_State_fieldAccessorTable = new
+    internal_static_util_BugMessage_StatePro_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_util_BugMessage_State_descriptor,
-        new String[] { "Type", });
-    internal_static_util_BugMessage_CallOut_descriptor =
+        internal_static_util_BugMessage_StatePro_descriptor,
+        new java.lang.String[] { "Type", });
+    internal_static_util_BugMessage_CallOutPro_descriptor =
       internal_static_util_BugMessage_descriptor.getNestedTypes().get(2);
-    internal_static_util_BugMessage_CallOut_fieldAccessorTable = new
+    internal_static_util_BugMessage_CallOutPro_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_util_BugMessage_CallOut_descriptor,
-        new String[] { "Word", });
-    internal_static_util_BugMessage_Potion_descriptor =
+        internal_static_util_BugMessage_CallOutPro_descriptor,
+        new java.lang.String[] { "Word", });
+    internal_static_util_BugMessage_PotionPro_descriptor =
       internal_static_util_BugMessage_descriptor.getNestedTypes().get(3);
-    internal_static_util_BugMessage_Potion_fieldAccessorTable = new
+    internal_static_util_BugMessage_PotionPro_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_util_BugMessage_Potion_descriptor,
-        new String[] { "Type", });
+        internal_static_util_BugMessage_PotionPro_descriptor,
+        new java.lang.String[] { "Type", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
