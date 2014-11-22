@@ -1,0 +1,48 @@
+package util;
+option java_package="yiou.chen.bugfight.util";
+option java_outer_classname = "BugMessageProto";
+//option optimize_for = LITE_RUNTIME;
+
+message BugMessage {
+    oneof  message_type{
+    Bug bug=1;
+    State state=2;
+    CallOut callout=3;
+    Potion potion=4;
+}
+enum BugType {
+        NORMAL = 0;
+        BEETLE = 1;
+        LOCUST = 2;
+        LADYBUG = 3;
+    }
+message Bug {
+    required BugType type = 1;
+
+    optional int32 level = 2 [default = 0];
+}
+ enum StateType {
+        READY = 0;
+        START = 1;
+        PAUSE = 2;
+        WIN = 3;
+        LOSE = 4;
+        QUIT = 5;
+    }
+message State {
+    required StateType type = 1;
+}
+
+message CallOut {
+    required string word = 1;
+}
+enum PotionType {
+        PARALYZE = 0;
+        BUG_RAIN = 1;
+    }
+message Potion {
+    required PotionType type = 1;
+
+}
+
+}
