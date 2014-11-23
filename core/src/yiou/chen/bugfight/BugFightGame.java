@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import yiou.chen.bugfight.interfaces.BluetoothCallback;
+import yiou.chen.bugfight.screen.LoginScreen;
 import yiou.chen.bugfight.screen.MainScreen;
 
 public class BugFightGame extends Game {
@@ -31,27 +32,11 @@ public class BugFightGame extends Game {
 
 	}
 
-
-
     @Override
 	public void render () {
         super.render();
-
-
         //user interaction, change bugData.health or something
         //make bug move use Gdx.graphics.getDeltaTime()
-
-        //use iterator to update the bugs
-        // Iterator<Rectangle> iter = raindrops.iterator();
-//        while(iter.hasNext()) {
-//            Rectangle raindrop = iter.next();
-//            raindrop.y -= 200 * Gdx.graphics.getDeltaTime();
-//            if(raindrop.y + 64 < 0) iter.remove();
-//            if(raindrop.overlaps(bucket)) {
-//                dropSound.play();
-//                iter.remove();
-//            }
-//        }
 	}
 
     @Override
