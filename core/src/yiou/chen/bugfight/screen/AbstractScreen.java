@@ -7,14 +7,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.BugInputProcessor;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
+import yiou.chen.bugfight.interfaces.NetworkCallback;
 import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
@@ -23,13 +22,13 @@ import yiou.chen.bugfight.interfaces.Renderable;
 public abstract class AbstractScreen extends ScreenAdapter implements Renderable, BugInputProcessor.InputCallback {
     protected final BugFightGame game;
     protected Constants.STATUS status= Constants.STATUS.PREPARE;
-    protected final BluetoothCallback bluetooth;
+    protected final NetworkCallback network;
     protected OrthographicCamera camera;
     protected BitmapFont font;
     protected SpriteBatch batch;
     public AbstractScreen(BugFightGame game){
         this.game=game;
-        this.bluetooth=game.blCallback;
+        this.network =game.network;
         Gdx.input.setInputProcessor(new BugInputProcessor(this));
         renderSetup();
     }
@@ -64,7 +63,7 @@ public abstract class AbstractScreen extends ScreenAdapter implements Renderable
         return rect;
     }
     protected void drawBatch(Texture texture,Rectangle rectangle){
-        batch.draw(texture,rectangle.x,flipY(rectangle),rectangle.width,rectangle.height);
+        batch.draw(texture, rectangle.x, flipY(rectangle), rectangle.width, rectangle.height);
     }
     protected void drawBatch(Texture texture, Rectangle rectangle,float xScale){
         Rectangle rect=new Rectangle(rectangle);
@@ -93,7 +92,7 @@ public abstract class AbstractScreen extends ScreenAdapter implements Renderable
         float height=bounds.height;
         float x=leftMargin;
         float y=topY-height;
-        font.draw(batch,seq,x,topY);
+        font.draw(batch, seq, x, topY);
         return new Rectangle(x,y,width,height);
     }
 }

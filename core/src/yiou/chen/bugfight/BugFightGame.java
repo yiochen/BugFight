@@ -2,22 +2,29 @@ package yiou.chen.bugfight;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.firebase.client.Firebase;
 
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
+import yiou.chen.bugfight.interfaces.NetworkCallback;
+import yiou.chen.bugfight.object.Room;
+import yiou.chen.bugfight.object.User;
 import yiou.chen.bugfight.screen.MainScreen;
 
 public class BugFightGame extends Game {
-    public final BluetoothCallback blCallback;
+    public final NetworkCallback network;
+    public Firebase fb;
+    public Room room;
+    public User me;
     public SpriteBatch batch;
 
 
-    public BugFightGame(BluetoothCallback callback){
+    public BugFightGame(NetworkCallback callback){
         super();
-        this.blCallback=callback;
+        this.network =callback;
+        this.fb=network.getFb();
     }
     public BugFightGame(){
         super();
-        blCallback=null;
+        network =null;
     }
     @Override
 	public void create () {

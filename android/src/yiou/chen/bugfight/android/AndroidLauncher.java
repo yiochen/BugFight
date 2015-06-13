@@ -16,6 +16,6 @@ public class AndroidLauncher extends AndroidApplication {
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         config.useAccelerometer=false;
         config.useCompass=false;
-		initialize(new BugFightGame(new AndroidBluetooth(this)), config);
+		initialize(new BugFightGame(new AndroidFirebase(this)), config);
 	}
 }

@@ -1,17 +1,11 @@
 package yiou.chen.bugfight.screen;
 
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import yiou.chen.bugfight.Assets;
 import yiou.chen.bugfight.BugFightGame;
 import yiou.chen.bugfight.Constants;
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
-import yiou.chen.bugfight.interfaces.Renderable;
 
 /**
  * Created by Yiou on 11/9/2014.
@@ -22,13 +16,13 @@ public class ServerScreen extends AbstractScreen {
 
     public ServerScreen(BugFightGame game) {
         super(game);
-       // if (this.bluetooth != null) {
-            if (bluetooth.isBluetoothOn()){
-                bluetooth.openServer();
+       // if (this.network != null) {
+            if (network.isBluetoothOn()){
+                network.openServer();
                 status= Constants.STATUS.RUNNING;
             }else {
 
-                bluetooth.turnOn();
+                network.turnOn();
 
             }
         //}
@@ -37,12 +31,12 @@ public class ServerScreen extends AbstractScreen {
     @Override
     public void render(float delta) {
         super.render(delta);
-        if (status == Constants.STATUS.PREPARE && bluetooth != null && bluetooth.isBluetoothOn()) {
-            bluetooth.openServer();
+        if (status == Constants.STATUS.PREPARE && network != null && network.isBluetoothOn()) {
+            network.openServer();
             status= Constants.STATUS.RUNNING;
         }
-        if (status == Constants.STATUS.RUNNING&&bluetooth.isConnected()) {
-            if (bluetooth.read() == 10) {
+        if (status == Constants.STATUS.RUNNING&& network.isConnected()) {
+            if (network.read() == 10) {
                 clientConnected = true;
                 game.setScreen(new GameScreen(game));
             }

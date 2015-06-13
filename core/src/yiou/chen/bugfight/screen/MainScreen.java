@@ -12,7 +12,9 @@ import yiou.chen.bugfight.Constants;
  * Created by Yiou on 11/9/2014.
  */
 public class MainScreen extends AbstractScreen{
-
+    //TODO: register user,
+    // if a new room name is suggested, create the room,go to waiting screen (serverScreen)
+    //if a new room is not suggested, go to the clientScreen where a list of rooms are shown
 
     private Rectangle optionBound1;
     private Rectangle optionBound2;
@@ -47,8 +49,8 @@ public class MainScreen extends AbstractScreen{
 
     private void drawOptions() {
         font.setColor(Color.WHITE);
-        Rectangle op1=drawCenterText("Open server",562,Constants.TEXT_L);
-        optionBound1=op1 ;
+//        Rectangle op1=drawCenterText("Open server",562,Constants.TEXT_L);
+//        optionBound1=op1 ;
         Rectangle op2=drawCenterText("Connect to",422,Constants.TEXT_L);
         optionBound2=op2;
     }
@@ -61,10 +63,10 @@ public class MainScreen extends AbstractScreen{
 
     @Override
     public boolean onTouch(float x, float y) {
-        if (optionBound1.contains(x,y)){
-            //open as server;
-            game.setScreen(new ServerScreen(game));
-        }
+//        if (optionBound1.contains(x,y)){
+//            //open as server;
+//            game.setScreen(new ServerScreen(game));
+//        }
         if (optionBound2.contains(x,y)){
             //connect as client
             game.setScreen(new ClientScreen(game));

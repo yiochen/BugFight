@@ -4,6 +4,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Rectangle;
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.FirebaseError;
 
 
 import java.util.HashMap;
@@ -15,6 +18,7 @@ import yiou.chen.bugfight.Constants;
 import yiou.chen.bugfight.World;
 import yiou.chen.bugfight.object.bugs.Bug;
 import yiou.chen.bugfight.interfaces.Updateable;
+import yiou.chen.bugfight.object.messages.BugMessage;
 
 /**
  * Created by Yiou on 11/8/2014.
@@ -34,6 +38,40 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
         initPrototype();
         this.render=new WorldRenderer(game.batch,world);
         status= Constants.STATUS.RUNNING;
+        initListener();
+    }
+    private void initListener(){
+        game.room.getPostsRef().addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                //if it's friend's bug, add to screen
+                BugMessage m=BugMessage.fromSnapshot(dataSnapshot);
+                //TODO: for debug purpose, change to not equals in production
+                if (m.getUserid().equals(game.me.getUuid())){
+                    world.addBug(m.getType());
+                }
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
     }
 
     private void initPrototype() {
@@ -69,10 +107,6 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
 
     }
     private void updateRunning(float deltaTime) {
-        int tmp=bluetooth.read();
-        if (tmp>0){
-            world.addBug(tmp-1);
-        }
         world.update(deltaTime);
     }
 
@@ -169,7 +203,7 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
 
                 if (world.powerScale.scale>=bug.cost){
                     world.powerScale.scale-=bug.cost;
-                    bluetooth.write(type.ordinal()+1);
+                    game.room.send(new BugMessage(game.me.getUuid(),type.ordinal(),10,10,10));
                 }
 
             }
@@ -181,6 +215,5 @@ public class GameScreen extends AbstractScreen implements World.WorldListener,Up
     public void dispose() {
         super.dispose();
         render.dispose();
-        bluetooth.cancelTransfer();
     }
 }

@@ -2,18 +2,17 @@ package yiou.chen.bugfight.android;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.firebase.client.Firebase;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -24,15 +23,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
+import yiou.chen.bugfight.interfaces.NetworkCallback;
 
 /**
  * Created by Yiou on 11/9/2014.
  */
-public class AndroidBluetooth implements BluetoothCallback {
+public class AndroidNetwork implements NetworkCallback {
     private boolean isConnected=false;
     private final int timeOut = 60000;
-    private static final String SERVICE_NAME = "bluetooth lets connect";
+    private static final String SERVICE_NAME = "network lets connect";
     private static final String STRING_UUID = "2bae675b-5999-4cc2-ae9c-247b68e20334";
 
     private final BluetoothAdapter mBluetoothAdapter;
@@ -46,26 +45,31 @@ public class AndroidBluetooth implements BluetoothCallback {
     private ConnectThread connectThread;
     private Handler uiThread = AndroidLauncher.uiThread;
 
-    public AndroidBluetooth(Activity context) {
+    public AndroidNetwork(Activity context) {
 
         //take an instance of BluetoothAdapter - Bluetooth radio
         this.context = context;
         pairedDevices = new HashSet<BluetoothDevice>();
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
-            Log.e(TAG, "your device doesn't support bluetooth");
+            Log.e(TAG, "your device doesn't support network");
             blAvailable = false;
         } else {
             blAvailable = true;
         }
 
 
+
+    }
+
+    public void connect(String user){
+
     }
     public void makeToast(final CharSequence sequence,final int length){
         uiThread.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(AndroidBluetooth.this.context, sequence, length).show();
+                Toast.makeText(AndroidNetwork.this.context, sequence, length).show();
             }
         });
     }
@@ -81,7 +85,7 @@ public class AndroidBluetooth implements BluetoothCallback {
                  */
                 @Override
                 public void run() {
-                    Toast.makeText(AndroidBluetooth.this.context, "turning on bluetooth", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AndroidNetwork.this.context, "turning on network", Toast.LENGTH_LONG).show();
                     Intent turnOnIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                     context.startActivityForResult(turnOnIntent, 1);
                 }
@@ -90,11 +94,11 @@ public class AndroidBluetooth implements BluetoothCallback {
             uiThread.post(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(AndroidBluetooth.this.context, "Bluetooth failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AndroidNetwork.this.context, "Bluetooth failed", Toast.LENGTH_LONG).show();
                 }
             });
 
-            Log.i(TAG, "as I told you bluetooth not available");
+            Log.i(TAG, "as I told you network not available");
         }
     }
 

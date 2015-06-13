@@ -12,6 +12,6 @@ public class DesktopLauncher {
         config.title = Constants.GAME_NAME;
         config.width = (int)Constants.GAME_WIDTH;
         config.height =(int)Constants.GAME_HEIGHT;
-        new LwjglApplication(new BugFightGame(new DummyBluetooth()), config);
+        new LwjglApplication(new BugFightGame(new DummyNetwork()), config);
     }
 }

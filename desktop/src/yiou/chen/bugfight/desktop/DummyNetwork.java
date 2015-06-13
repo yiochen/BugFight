@@ -3,12 +3,12 @@ package yiou.chen.bugfight.desktop;
 import java.util.ArrayList;
 import java.util.List;
 
-import yiou.chen.bugfight.interfaces.BluetoothCallback;
+import yiou.chen.bugfight.interfaces.NetworkCallback;
 
 /**
  * Created by Yiou on 11/17/2014.
  */
-public class DummyBluetooth implements BluetoothCallback {
+public class DummyNetwork implements NetworkCallback {
     private int bug=0;
     private boolean started=false;
     @Override
